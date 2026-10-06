@@ -1,0 +1,5831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shree Sai Krupa | Veg & Non-Veg Restaurant</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ==============================
+   RESET
+================================ */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #fffaf4;
+            color: #291a13;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+
+        /* ==============================
+   VARIABLES
+================================ */
+
+        :root {
+            --red: #a91f16;
+            --dark-red: #75140e;
+            --orange: #e87520;
+            --gold: #dca32a;
+            --cream: #fffaf4;
+            --light: #f6eee4;
+            --white: #fff;
+            --dark: #24150f;
+            --muted: #746a63;
+            --border: #eadfd3;
+            --green: #16843a;
+        }
+
+
+        /* ==============================
+   COMMON
+================================ */
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 45px;
+        }
+
+        .eyebrow {
+            color: var(--red);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .section-heading h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 45px;
+            line-height: 1.15;
+            margin-bottom: 14px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+
+        /* ==============================
+   NAVBAR
+================================ */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            background: rgba(255, 250, 244, .96);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0, 0, 0, .06);
+        }
+
+        .navbar {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--red);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-size: 22px;
+        }
+
+        .logo strong {
+            display: block;
+            color: var(--red);
+            font-family: "Playfair Display", serif;
+            font-size: 20px;
+        }
+
+        .logo span {
+            font-size: 10px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav a {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--red);
+        }
+
+        .nav-call {
+            background: var(--red);
+            color: white !important;
+            padding: 11px 20px;
+            border-radius: 30px;
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 0;
+            background: none;
+            font-size: 28px;
+        }
+
+        /* Navbar Social Icons */
+
+        .social-nav {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #fff !important;
+            font-weight: 800;
+            font-size: 17px;
+            transition: .3s ease;
+        }
+
+        .facebook-nav {
+            background: #1877f2;
+        }
+
+        .instagram-nav {
+            background: linear-gradient(135deg,
+                    #833ab4,
+                    #fd1d1d,
+                    #fcb045);
+        }
+
+        .social-nav:hover {
+            transform: translateY(-2px) scale(1.05);
+        }
+
+
+
+        /* ==============================
+   HERO
+================================ */
+
+        .hero {
+            min-height: 720px;
+            padding-top: 76px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(90deg,
+                    rgba(25, 10, 5, .95),
+                    rgba(25, 10, 5, .72),
+                    rgba(25, 10, 5, .15)),
+                url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=90") center/cover;
+        }
+
+        .hero-content {
+            max-width: 690px;
+            color: #fff;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .25);
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(45px, 6vw, 75px);
+            line-height: 1.02;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #ffc348;
+        }
+
+        .hero p {
+            color: #f5e6dc;
+            font-size: 17px;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 23px;
+            border-radius: 30px;
+            font-weight: 700;
+            border: 0;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: #e74728;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #ff5b39;
+            transform: translateY(-2px);
+        }
+
+        .btn-white {
+            background: #fff;
+            color: #291a13;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* ==============================
+   INFO BAR
+================================ */
+
+        .info-bar {
+            background: var(--red);
+            color: white;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .info {
+            padding: 20px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgba(255, 255, 255, .18);
+        }
+
+        .info:last-child {
+            border: 0;
+        }
+
+        .info-icon {
+            font-size: 23px;
+        }
+
+        .info strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .info span {
+            font-size: 11px;
+            opacity: .8;
+        }
+
+
+        /* ==============================
+   POPULAR
+================================ */
+
+        .popular {
+            background: #fff;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .food-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(50, 20, 10, .12);
+        }
+
+        .food-card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .food-body {
+            padding: 18px;
+        }
+
+        .food-body h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 21px;
+            margin-bottom: 5px;
+        }
+
+        .food-body p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .food-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            color: var(--red);
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+
+        /* ==============================
+   VEG / NON VEG
+================================ */
+
+        .veg,
+        .nonveg {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 20px;
+        }
+
+        .veg {
+            color: var(--green);
+            border: 1px solid #b9dfc4;
+            background: #f1fbf4;
+        }
+
+        .nonveg {
+            color: #b52318;
+            border: 1px solid #edc1ba;
+            background: #fff4f2;
+        }
+
+
+        /* ==============================
+   ABOUT
+================================ */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-images {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .about-main {
+            width: 80%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .about-small {
+            position: absolute;
+            width: 48%;
+            height: 230px;
+            object-fit: cover;
+            right: 0;
+            bottom: 0;
+            border: 9px solid var(--cream);
+            border-radius: 23px;
+        }
+
+        .about-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 45px;
+            line-height: 1.12;
+            margin: 8px 0 20px;
+        }
+
+        .about-content p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .feature {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 15px;
+        }
+
+        .feature strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .feature span {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+
+        /* ==============================
+   MENU
+================================ */
+
+        .menu-section {
+            background: var(--light);
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .filter {
+            border: 1px solid var(--border);
+            background: #fff;
+            padding: 10px 17px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .filter.active,
+        .filter:hover {
+            background: var(--red);
+            color: white;
+            border-color: var(--red);
+        }
+
+        .search {
+            max-width: 450px;
+            margin: 0 auto 35px;
+        }
+
+        .search input {
+            width: 100%;
+            border: 1px solid var(--border);
+            padding: 14px 20px;
+            border-radius: 30px;
+            outline: none;
+            background: white;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .menu-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            min-height: 150px;
+            transition: .3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(40, 20, 10, .08);
+        }
+
+        .menu-card img {
+            width: 165px;
+            min-width: 165px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-content {
+            padding: 16px;
+            flex: 1;
+        }
+
+        .menu-title {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .menu-content h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 20px;
+        }
+
+        .menu-price {
+            color: var(--red);
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .menu-content p {
+            color: var(--muted);
+            font-size: 12px;
+            margin: 5px 0 12px;
+        }
+
+        .menu-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* ==============================
+   CUSTOMER REVIEWS
+================================ */
+
+        .reviews-section {
+            background: #fff;
+            padding: 90px 0;
+        }
+
+
+        /* Rating Summary */
+
+        .review-summary {
+            max-width: 850px;
+            margin: 0 auto 45px;
+            padding: 30px;
+            background: linear-gradient(135deg,
+                    #fff8f2,
+                    #fff);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            box-shadow: 0 10px 30px rgba(50, 20, 10, .06);
+        }
+
+        .rating-number {
+            min-width: 180px;
+            text-align: center;
+            border-right: 1px solid var(--border);
+            padding-right: 40px;
+        }
+
+        .rating-number strong {
+            display: block;
+            font-family: "Playfair Display", serif;
+            font-size: 55px;
+            color: var(--red);
+            line-height: 1;
+        }
+
+        .big-stars {
+            color: #f5a623;
+            font-size: 21px;
+            letter-spacing: 2px;
+            margin: 8px 0;
+        }
+
+        .rating-number span {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .rating-info h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .rating-info p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .review-btn {
+            border: 0;
+            background: var(--red);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .review-btn:hover {
+            background: var(--dark-red);
+            transform: translateY(-2px);
+        }
+
+
+        /* Review Grid */
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .review-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 23px;
+            transition: .3s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(50, 20, 10, .09);
+        }
+
+        .review-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .review-user {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .review-avatar {
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+        }
+
+        .review-user strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .review-user span {
+            display: block;
+            color: var(--muted);
+            font-size: 11px;
+            margin-top: 2px;
+        }
+
+        .review-date {
+            color: #999;
+            font-size: 11px;
+        }
+
+        .review-stars {
+            color: #f5a623;
+            letter-spacing: 2px;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .review-card p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        /* ==============================
+   REVIEW MODAL
+================================ */
+
+        .review-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(25, 10, 5, .65);
+            backdrop-filter: blur(5px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 2000;
+        }
+
+        .review-modal.show {
+            display: flex;
+        }
+
+        .review-modal-box {
+            position: relative;
+            width: min(500px, 100%);
+            max-height: 90vh;
+            overflow-y: auto;
+            background: #fff;
+            border-radius: 25px;
+            padding: 35px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, .3);
+        }
+
+        .review-close {
+            position: absolute;
+            right: 18px;
+            top: 15px;
+            width: 35px;
+            height: 35px;
+            border: 0;
+            border-radius: 50%;
+            background: #f5eee8;
+            color: #5b4438;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .review-modal-heading {
+            margin-bottom: 25px;
+        }
+
+        .review-modal-heading h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 32px;
+            margin: 5px 0 8px;
+        }
+
+        .review-modal-heading p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        #reviewForm label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            margin: 16px 0 7px;
+        }
+
+        #reviewForm input,
+        #reviewForm textarea {
+            width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 13px 15px;
+            font-family: inherit;
+            font-size: 13px;
+            outline: none;
+            resize: vertical;
+        }
+
+        #reviewForm input:focus,
+        #reviewForm textarea:focus {
+            border-color: var(--red);
+            box-shadow: 0 0 0 3px rgba(169, 31, 22, .08);
+        }
+
+
+        /* Star Selector */
+
+        .star-selector {
+            display: flex;
+            gap: 5px;
+        }
+
+        .star-selector button {
+            border: 0;
+            background: none;
+            color: #d7d0cb;
+            font-size: 32px;
+            cursor: pointer;
+            padding: 0;
+            transition: .2s;
+        }
+
+        .star-selector button:hover,
+        .star-selector button.selected {
+            color: #f5a623;
+            transform: scale(1.08);
+        }
+
+
+        /* Submit */
+
+        .submit-review {
+            width: 100%;
+            border: 0;
+            background: var(--red);
+            color: #fff;
+            padding: 14px;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .submit-review:hover {
+            background: var(--dark-red);
+            transform: translateY(-2px);
+        }
+
+
+        /* ==============================
+   REVIEW RESPONSIVE
+================================ */
+
+        @media(max-width:850px) {
+
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width:650px) {
+
+            .review-summary {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
+            }
+
+            .rating-number {
+                border-right: 0;
+                border-bottom: 1px solid var(--border);
+                padding-right: 0;
+                padding-bottom: 25px;
+            }
+
+            .rating-info {
+                text-align: center;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .review-modal-box {
+                padding: 28px 22px;
+            }
+
+        }
+
+
+        /* ==============================
+   CTA
+================================ */
+
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+
+            background:
+                linear-gradient(rgba(119, 22, 13, .9), rgba(119, 22, 13, .9)),
+                url("https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=1800&q=90") center/cover;
+        }
+
+        .cta h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 52px;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #f3ddd6;
+        }
+
+
+        /* ==============================
+   CONTACT
+================================ */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .contact-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .contact-card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            min-width: 44px;
+            height: 44px;
+            background: #fff0e8;
+            color: var(--red);
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+        }
+
+        .contact-row strong {
+            display: block;
+        }
+
+        .contact-row span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .map {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 390px;
+            border: 0;
+        }
+
+        .contact-socials {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .contact-social {
+            display: inline-flex;
+            align-items: center;
+            padding: 7px 12px;
+            border-radius: 20px;
+            color: #fff !important;
+            font-size: 11px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .instagram-contact {
+            background: linear-gradient(135deg,
+                    #833ab4,
+                    #fd1d1d,
+                    #fcb045);
+        }
+
+        .facebook-contact {
+            background: #1877f2;
+        }
+
+        .contact-social:hover {
+            transform: translateY(-2px);
+        }
+
+
+
+        /* ==============================
+   FOOTER
+================================ */
+
+        footer {
+            background: #21130e;
+            color: white;
+            padding: 55px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 35px;
+        }
+
+        footer h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 23px;
+            margin-bottom: 14px;
+        }
+
+        footer p,
+        footer a {
+            color: #c9bdb6;
+            font-size: 13px;
+        }
+
+        footer a {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            padding-top: 20px;
+            text-align: center;
+            color: #988b83;
+            font-size: 12px;
+        }
+
+        /* ==============================
+   SOCIAL MEDIA
+================================ */
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: max-content;
+            min-width: 150px;
+            padding: 9px 14px;
+            border-radius: 30px;
+            color: #fff !important;
+            font-size: 13px;
+            font-weight: 700;
+            transition: .3s ease;
+        }
+
+        .social span {
+            width: 26px;
+            height: 26px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .2);
+            font-size: 16px;
+        }
+
+        .social.facebook {
+            background: #1877f2;
+        }
+
+        .social.instagram {
+            background: linear-gradient(135deg,
+                    #833ab4,
+                    #fd1d1d,
+                    #fcb045);
+        }
+
+        .social:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+        }
+
+
+
+        /* ==============================
+   FLOATING BUTTONS
+================================ */
+
+        .floating {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 500;
+        }
+
+        .float {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-size: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+        }
+
+        .float.call {
+            background: var(--red);
+        }
+
+        .float.whatsapp {
+            background: #25d366;
+        }
+
+
+        /* ==============================
+   RESPONSIVE
+================================ */
+
+        @media(max-width:1000px) {
+
+            .food-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width:750px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 76px;
+                left: 0;
+                width: 100%;
+                background: var(--cream);
+                padding: 20px;
+                flex-direction: column;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+            }
+
+            nav.open {
+                display: flex;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 46px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info {
+                border-right: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, .15);
+            }
+
+            .food-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+        }
+
+        @media(max-width:500px) {
+
+            section {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .section-heading h2 {
+                font-size: 35px;
+            }
+
+            .about-content h2 {
+                font-size: 36px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-card {
+                display: block;
+            }
+
+            .menu-card img {
+                width: 100%;
+                height: 200px;
+            }
+
+        }
+
+
+        /* ==============================
+   IMAGE LOADING EFFECT
+================================ */
+
+        .menu-card img,
+        .food-card img {
+            transition: transform .4s ease;
+        }
+
+        .menu-card:hover img,
+        .food-card:hover img {
+            transform: scale(1.04);
+        }
+
+        /* ==============================
+   SHOW MORE / SHOW LESS
+================================ */
+
+        .menu-more-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 35px;
+        }
+
+        .show-more-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            min-width: 160px;
+
+            padding: 13px 24px;
+
+            border: 2px solid var(--red);
+            border-radius: 30px;
+
+            background: #fff;
+
+            color: var(--red);
+
+            font-size: 14px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                background .25s ease,
+                color .25s ease,
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .show-more-btn span {
+            font-size: 17px;
+            line-height: 1;
+        }
+
+        .show-more-btn:hover {
+            background: var(--red);
+            color: #fff;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px rgba(169, 31, 22, .20);
+        }
+
+        .show-more-btn:active {
+            transform: translateY(0);
+        }
+
+        /* ================================
+   SAI KRUPA LOGO
+================================ */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        /* Circular logo container */
+        .logo-icon {
+            width: 65px;
+            height: 65px;
+
+            border-radius: 50%;
+            overflow: hidden;
+
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        /* Logo image */
+        .logo-icon img {
+            position: absolute;
+
+            /* Image size */
+            width: 105px;
+            height: 125px;
+
+            max-width: none;
+
+            /* Move image to show only circular golden part */
+            left: -20px;
+            top: -25px;
+
+            object-fit: cover;
+        }
+
+        /* Logo text */
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text strong {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .logo-text span {
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        /* ================================
+   BOOK ORDER BUTTON
+================================ */
+
+        .book-order-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            padding: 12px 22px;
+
+            border: none;
+            border-radius: 30px;
+
+            background: linear-gradient(135deg,
+                    var(--red),
+                    var(--orange));
+
+            color: #fff;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: .3s ease;
+
+            box-shadow: 0 8px 20px rgba(169, 31, 22, .25);
+        }
+
+        .book-order-btn:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 25px rgba(169, 31, 22, .35);
+        }
+
+
+        /* ================================
+   BOOKING OVERLAY
+================================ */
+
+        .booking-overlay {
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(20, 10, 5, .75);
+
+            backdrop-filter: blur(6px);
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+
+            z-index: 9999;
+
+            overflow-y: auto;
+        }
+
+        .booking-overlay.active {
+            display: flex;
+        }
+
+
+        /* ================================
+   BOOKING BOX
+================================ */
+
+        .booking-box {
+            width: 100%;
+            max-width: 600px;
+
+            background: var(--cream);
+
+            border-radius: 20px;
+
+            padding: 30px;
+
+            position: relative;
+
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, .35);
+
+            animation: bookingPopup .3s ease;
+        }
+
+        @keyframes bookingPopup {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+
+        /* ================================
+   CLOSE BUTTON
+================================ */
+
+        .booking-close {
+            position: absolute;
+
+            top: 15px;
+            right: 18px;
+
+            width: 38px;
+            height: 38px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: #f2e4d7;
+
+            color: var(--dark);
+
+            font-size: 25px;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .booking-close:hover {
+            background: var(--red);
+            color: white;
+        }
+
+
+        /* ================================
+   BOOKING HEADER
+================================ */
+
+        .booking-header {
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+        .booking-header>i {
+            width: 55px;
+            height: 55px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: linear-gradient(135deg,
+                    var(--red),
+                    var(--orange));
+
+            color: white;
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+        .booking-header h2 {
+            margin: 0;
+
+            color: var(--dark-red);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 30px;
+        }
+
+        .booking-header p {
+            margin: 5px 0 0;
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        /* ================================
+   FORM
+================================ */
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: var(--dark);
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 12px 14px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            background: white;
+
+            color: var(--dark);
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 14px;
+
+            outline: none;
+
+            transition: .3s;
+
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+
+            border-color: var(--red);
+
+            box-shadow:
+                0 0 0 3px rgba(169, 31, 22, .08);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+
+        /* ================================
+   TWO COLUMN FORM
+================================ */
+
+        .form-row {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+        }
+
+
+        /* ================================
+   CONFIRM BUTTON
+================================ */
+
+        .confirm-booking-btn {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: linear-gradient(135deg,
+                    var(--red),
+                    var(--orange));
+
+            color: white;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+            margin-top: 5px;
+        }
+
+        .confirm-booking-btn:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 25px rgba(169, 31, 22, .3);
+        }
+
+
+        /* ================================
+   SUCCESS OVERLAY
+================================ */
+
+        .success-overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(20, 10, 5, .75);
+
+            backdrop-filter: blur(6px);
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+
+            z-index: 10000;
+        }
+
+        .success-overlay.active {
+            display: flex;
+        }
+
+
+        /* ================================
+   SUCCESS BOX
+================================ */
+
+        .success-box {
+
+            width: 100%;
+            max-width: 430px;
+
+            background: var(--cream);
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, .4);
+
+            animation: bookingPopup .3s ease;
+        }
+
+        .success-icon {
+
+            width: 70px;
+            height: 70px;
+
+            margin: 0 auto 15px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #e5f7e9;
+
+            color: var(--green);
+
+            font-size: 30px;
+        }
+
+        .success-box h2 {
+
+            margin: 0 0 8px;
+
+            color: var(--dark-red);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 28px;
+        }
+
+        .success-box p {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ================================
+   BOOKING DETAILS
+================================ */
+
+        .booking-details {
+
+            margin: 20px 0;
+
+            padding: 15px;
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            text-align: left;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+        .booking-details strong {
+            color: var(--red);
+        }
+
+
+        /* ================================
+   SUCCESS BUTTON
+================================ */
+
+        .success-btn {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: var(--red);
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .success-btn:hover {
+            background: var(--dark-red);
+        }
+
+
+        /* ================================
+   MOBILE
+================================ */
+
+        @media (max-width: 600px) {
+
+            .booking-box {
+                padding: 25px 18px;
+
+                border-radius: 16px;
+            }
+
+            .booking-header h2 {
+                font-size: 25px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .booking-close {
+                top: 10px;
+                right: 10px;
+            }
+
+            .success-box {
+                padding: 28px 20px;
+            }
+        }
+
+
+        /* ================================
+   BOOKING MENU CHECKBOXES
+================================ */
+
+.booking-menu-list {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    max-height: 320px;
+
+    overflow-y: auto;
+
+    padding: 5px;
+
+}
+
+
+/* Individual food */
+
+.booking-food-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: all .25s ease;
+
+}
+
+
+.booking-food-item:hover {
+
+    border-color: var(--red);
+
+    background: #fff8f3;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* Checkbox */
+
+.booking-food-item input {
+
+    width: 18px;
+
+    height: 18px;
+
+    flex-shrink: 0;
+
+    accent-color: var(--red);
+
+    cursor: pointer;
+
+}
+
+
+/* Food information */
+
+.booking-food-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.booking-food-name {
+
+    color: var(--dark);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.booking-food-price {
+
+    color: var(--red);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+/* Selected food in success popup */
+
+.selected-food {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 5px 0;
+
+    border-bottom: 1px dashed var(--border);
+
+}
+
+
+.selected-food strong {
+
+    color: var(--red);
+
+}
+
+
+.food-list {
+
+    margin-top: 10px;
+
+}
+
+
+/* Scrollbar */
+
+.booking-menu-list::-webkit-scrollbar {
+
+    width: 6px;
+
+}
+
+
+.booking-menu-list::-webkit-scrollbar-track {
+
+    background: #f5eee7;
+
+    border-radius: 10px;
+
+}
+
+
+.booking-menu-list::-webkit-scrollbar-thumb {
+
+    background: var(--red);
+
+    border-radius: 10px;
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .booking-menu-list {
+
+        grid-template-columns: 1fr;
+
+        max-height: 350px;
+
+    }
+
+}
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ============================
+     HEADER
+============================= -->
+
+    <header>
+        <div class="container navbar">
+
+            <!-- Logo -->
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <img src="images/home/logo.jpeg" alt="Shree Sai Krupa Logo">
+                </div>
+
+                <div class="logo-text">
+                    <strong>Shree Sai Krupa</strong>
+                    <span>Veg • Non-Veg Restaurant</span>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">
+                ☰
+            </button>
+
+            <!-- Navigation -->
+            <nav id="nav">
+
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+
+                <!-- Facebook -->
+                <a class="social-nav facebook-nav" href="YOUR_FACEBOOK_PAGE_URL" target="_blank"
+                    rel="noopener noreferrer" aria-label="Facebook">
+                    f
+                </a>
+
+                <!-- Instagram -->
+                <a class="social-nav instagram-nav" href="https://www.instagram.com/saikrupa_veg_nonveg/"
+                    target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    ◎
+                </a>
+
+                <!-- Call -->
+                <a class="nav-call" href="tel:07276803030">
+                    📞 Call Now
+                </a>
+
+            </nav>
+
+        </div>
+    </header>
+
+    </div>
+
+    </header>
+
+
+
+    <!-- ============================
+     HERO
+============================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    ⭐ Popular Indian Restaurant in Pune
+                </div>
+
+                <h1>
+                    Authentic Indian
+                    <span>Flavours</span>
+                    in Pune
+                </h1>
+
+                <p>
+                    Enjoy delicious biryanis, tandoori dishes, chicken,
+                    mutton, paneer, naan and classic Indian vegetarian
+                    specialities at Shree Sai Krupa.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#menu" class="btn btn-primary">
+                        🍽 View Menu
+                    </a>
+
+                    <a href="tel:07276803030" class="btn btn-white">
+                        📞 Call Restaurant
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================
+     INFO
+============================= -->
+
+    <div class="info-bar">
+
+        <div class="container info-grid">
+
+            <div class="info">
+                <div class="info-icon">📍</div>
+                <div>
+                    <strong>Chandan Nagar</strong>
+                    <span>Pune, Maharashtra</span>
+                </div>
+            </div>
+
+            <div class="info">
+                <div class="info-icon">💰</div>
+                <div>
+                    <strong>₹200–₹400</strong>
+                    <span>Per person</span>
+                </div>
+            </div>
+
+            <div class="info">
+                <div class="info-icon">🥘</div>
+                <div>
+                    <strong>Veg & Non-Veg</strong>
+                    <span>Wide selection</span>
+                </div>
+            </div>
+
+            <div class="info">
+                <div class="info-icon">🌙</div>
+                <div>
+                    <strong>Late Night</strong>
+                    <span>Service available</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ============================
+     POPULAR DISHES
+============================= -->
+
+    <section class="popular">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Customer Favourites
+                </div>
+
+                <h2>
+                    Popular Dishes
+                </h2>
+
+                <p>
+                    Try some of our most-loved dishes.
+                </p>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <!-- Chicken Biryani -->
+
+                <div class="food-card">
+
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-dum-biryani.jpg"
+                        alt="Chicken Dum Biryani">
+
+                    <div class="food-body">
+
+                        <h3>Chicken Dum Biryani</h3>
+
+                        <p>
+                            Slow-cooked basmati rice with marinated chicken,
+                            aromatic spices, salan and raita.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <span class="price">₹250</span>
+
+                            <span class="nonveg">● Non-Veg</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tandoori Chicken -->
+
+                <div class="food-card">
+
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/tandoori-chicken.jpg" alt="Tandoori Chicken">
+
+                    <div class="food-body">
+
+                        <h3>Tandoori Chicken</h3>
+
+                        <p>
+                            Chicken marinated in curd and Indian spices,
+                            then roasted in a traditional tandoor.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <span class="price">₹420</span>
+
+                            <span class="nonveg">● Non-Veg</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Paneer -->
+
+                <div class="food-card">
+
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/paneer-butter-masala.jpg" alt="Paneer Butter Masala">
+
+                    <div class="food-body">
+
+                        <h3>Paneer Butter Masala</h3>
+
+                        <p>
+                            Soft paneer cooked in a creamy tomato,
+                            butter and cashew gravy.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <span class="price">₹410</span>
+
+                            <span class="veg">● Veg</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Garlic Naan -->
+
+                <div class="food-card">
+
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/garlic-butter-naan.jpg" alt="Garlic Naan">
+
+                    <div class="food-body">
+
+                        <h3>Garlic Butter Naan</h3>
+
+                        <p>
+                            Clay oven baked naan topped with garlic,
+                            butter and coriander.
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <span class="price">₹110</span>
+
+                            <span class="veg">● Veg</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================
+     ABOUT
+============================= -->
+
+    <section id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-images">
+
+                <img class="about-main" src="C:\ZTH_HTML_CSS\Sai_Krupa\images\home\sai_krupa.jpg"
+                    alt="Indian restaurant interior">
+
+                <img class="about-small" src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/biryani.jpg" alt="Indian curry">
+
+            </div>
+
+
+            <div class="about-content">
+
+                <div class="eyebrow">
+                    About Us
+                </div>
+
+                <h2>
+                    Traditional Taste, Generous Portions
+                </h2>
+
+                <p>
+                    Shree Sai Krupa Veg Non-Veg Restaurant serves a
+                    wide range of Indian favourites in Chandan Nagar,
+                    Pune.
+                </p>
+
+                <p>
+                    Our menu includes tandoori specialities, dum
+                    biryanis, chicken and mutton preparations,
+                    paneer dishes, vegetarian curries, naan and
+                    Indo-Chinese favourites.
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+                        <strong>🔥 Freshly Prepared</strong>
+                        <span>Delicious Indian flavours.</span>
+                    </div>
+
+                    <div class="feature">
+                        <strong>🥘 Large Menu</strong>
+                        <span>Veg and non-veg choices.</span>
+                    </div>
+
+                    <div class="feature">
+                        <strong>🌙 Late Night</strong>
+                        <span>Great for late-night cravings.</span>
+                    </div>
+
+                    <div class="feature">
+                        <strong>💰 Value For Money</strong>
+                        <span>₹200–₹400 average.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================
+     MENU
+============================= -->
+
+    <section class="menu-section" id="menu">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Our Menu
+                </div>
+
+                <h2>
+                    Explore Our Food
+                </h2>
+
+                <p>
+                    Search or filter the menu to find your favourite dish.
+                </p>
+
+            </div>
+
+
+            <div class="filters">
+
+                <button class="filter active" onclick="filterFood('all',this)">
+                    All
+                </button>
+
+                <button class="filter" onclick="filterFood('chicken',this)">
+                    Chicken
+                </button>
+
+                <button class="filter" onclick="filterFood('mutton',this)">
+                    Mutton
+                </button>
+
+                <button class="filter" onclick="filterFood('biryani',this)">
+                    Biryani
+                </button>
+
+                <button class="filter" onclick="filterFood('veg',this)">
+                    Vegetarian
+                </button>
+
+                <button class="filter" onclick="filterFood('tandoor',this)">
+                    Tandoor
+                </button>
+
+            </div>
+
+
+
+            <div class="search">
+
+                <input type="text" id="searchInput" placeholder="🔎 Search food..." onkeyup="searchFood()">
+
+            </div>
+
+
+            <div class="menu-grid" id="menuGrid">
+
+
+                <!-- =====================================================
+     BIRYANI
+===================================================== -->
+
+                <div class="menu-card" data-category="biryani chicken" data-name="chicken dum biryani">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-dum-biryani.jpg"
+                        alt="Chicken Dum Biryani">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken Dum Biryani</h3>
+                            <span class="menu-price">₹250</span>
+                        </div>
+                        <p>Marinated chicken cooked with secret spices and basmati rice on slow fire, served with salan,
+                            raita and salad.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="biryani mutton" data-name="mutton dum biryani">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/mutton-dum-biryani.jpg" alt="Mutton Dum Biryani">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Mutton Dum Biryani</h3>
+                            <span class="menu-price">₹380</span>
+                        </div>
+                        <p>Marinated mutton pieces cooked with aromatic basmati rice and traditional dum biryani spices.
+                        </p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="biryani veg" data-name="veg biryani">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/veg-biryani.jpg" alt="Veg Biryani">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Veg Biryani</h3>
+                            <span class="menu-price">₹350</span>
+                        </div>
+                        <p>Fresh vegetables cooked with aromatic basmati rice and flavorful Indian spices.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="biryani veg" data-name="paneer tikka biryani">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/paneer-tikka-biryani.jpg" alt="Paneer Tikka Biryani">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Paneer Tikka Biryani</h3>
+                            <span class="menu-price">₹440</span>
+                        </div>
+                        <p>Paneer marinated with yogurt and spices, grilled in tandoor and combined with dum biryani
+                            rice.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+
+                <!-- =====================================================
+     CHICKEN MAIN COURSE
+===================================================== -->
+
+                <div class="menu-card" data-category="chicken" data-name="butter chicken">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/butter-chicken.jpg" alt="Butter Chicken">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Butter Chicken</h3>
+                            <span class="menu-price">₹380</span>
+                        </div>
+                        <p>Tandoor-grilled chicken tikka simmered in smooth tomato, cashew, butter and fenugreek gravy.
+                        </p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="chicken" data-name="chicken masala">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-masala.jpg" alt="Chicken Masala">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken Masala</h3>
+                            <span class="menu-price">₹300</span>
+                        </div>
+                        <p>Chicken pieces cooked in classic onion-based gravy with aromatic Indian spices.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="chicken" data-name="chicken handi">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-handi.jpg" alt="Chicken Handi">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken Handi</h3>
+                            <span class="menu-price">₹490</span>
+                        </div>
+                        <p>Spicy grounded masala cooked in a traditional handi with tender chicken pieces.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="chicken" data-name="chicken kolhapuri">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-kolhapuri.jpg" alt="Chicken Kolhapuri">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken Kolhapuri</h3>
+                            <span class="menu-price">₹350</span>
+                        </div>
+                        <p>Chicken cooked in a fiery and flavorful traditional Kolhapuri-style masala.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="chicken" data-name="chicken malwani">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-malwani.jpg" alt="Chicken Malwani">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken Malwani</h3>
+                            <span class="menu-price">₹370</span>
+                        </div>
+                        <p>Slow-cooked chicken with a rich Malwani masala, served with chicken sukka.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="chicken" data-name="chicken nawabi">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-nawabi.jpg" alt="Chicken Nawabi">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken Nawabi</h3>
+                            <span class="menu-price">₹410</span>
+                        </div>
+                        <p>Juicy chicken cooked in onion gravy, topped with egg omelette and cashew nuts.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="chicken" data-name="chicken tikka masala">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-tikka-masala.jpg"
+                        alt="Chicken Tikka Masala">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken Tikka Masala</h3>
+                            <span class="menu-price">₹480</span>
+                        </div>
+                        <p>Spicy chicken tikka with capsicum, onion and tomato cooked in creamy gravy.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="chicken" data-name="murg matka handi">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/murg-matka-handi.jpg" alt="Murg Matka Handi">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Murg Matka Handi</h3>
+                            <span class="menu-price">₹560</span>
+                        </div>
+                        <p>Chef-special chicken preparation cooked in spicy grounded masala and desi ghee.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="chicken" data-name="murg musallam">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/murg-musallam.jpg" alt="Murg Musallam">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Murg Musallam</h3>
+                            <span class="menu-price">₹580</span>
+                        </div>
+                        <p>Chicken cooked with Indian spices and onion gravy, garnished with boiled egg and coriander.
+                        </p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+
+                <!-- =====================================================
+     CHICKEN STARTERS
+===================================================== -->
+
+                <div class="menu-card" data-category="chicken" data-name="chicken 65">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-65.jpg" alt="Chicken 65">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken 65</h3>
+                            <span class="menu-price">₹380</span>
+                        </div>
+                        <p>Boneless chicken cooked with curd, curry leaves, red chilli and aromatic spices.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="chicken" data-name="chicken chilly dry">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-chilly-dry.jpg" alt="Chicken Chilly Dry">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken Chilly Dry</h3>
+                            <span class="menu-price">₹380</span>
+                        </div>
+                        <p>Crispy chicken tossed with garlic, spring onions, green chillies and soya sauce.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="chicken" data-name="chicken crispy">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-crispy.jpg" alt="Chicken Crispy">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken Crispy</h3>
+                            <span class="menu-price">₹420</span>
+                        </div>
+                        <p>Crispy fried chicken chunks tossed in a tangy and spicy house sauce.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="chicken" data-name="chicken lollipop">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-lollipop.jpg" alt="Chicken Lollipop">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken Lollypop</h3>
+                            <span class="menu-price">₹290</span>
+                        </div>
+                        <p>Juicy chicken wings prepared with flavorful spices and crispy coating.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="chicken" data-name="chicken satay">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-satay.jpg" alt="Chicken Satay">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken Satay</h3>
+                            <span class="menu-price">₹460</span>
+                        </div>
+                        <p>Grilled chicken pieces cooked with spices and peanut butter.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+
+                <!-- =====================================================
+     TANDOOR
+===================================================== -->
+
+                <div class="menu-card" data-category="tandoor chicken" data-name="chicken tikka">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/chicken-tikka.jpg" alt="Chicken Tikka">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Chicken Tikka</h3>
+                            <span class="menu-price">₹480</span>
+                        </div>
+                        <p>Chicken pieces marinated with curd and spices, then grilled over charcoal.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="tandoor chicken" data-name="tandoori chicken">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/tandoori-chicken.jpg" alt="Tandoori Chicken">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Tandoori Chicken</h3>
+                            <span class="menu-price">₹420</span>
+                        </div>
+                        <p>Chicken marinated in Indian spices and curd, cooked in a traditional tandoor.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="tandoor chicken" data-name="creamy tandoori chicken">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/creamy-tandoori-chicken.jpg"
+                        alt="Creamy Tandoori Chicken">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Creamy Tandoori Chicken</h3>
+                            <span class="menu-price">₹500</span>
+                        </div>
+                        <p>Tender chicken marinated in a rich creamy spice mixture and cooked in tandoor.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+
+                <!-- =====================================================
+     MUTTON
+===================================================== -->
+
+                <div class="menu-card" data-category="mutton" data-name="mutton fry">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/mutton-fry.jpg" alt="Mutton Fry">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Mutton Fry</h3>
+                            <span class="menu-price">₹450</span>
+                        </div>
+                        <p>Tender mutton pieces cooked with Indian spices and coriander.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="mutton" data-name="mutton kheema masala">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/mutton-kheema-masala.jpg"
+                        alt="Mutton Kheema Masala">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Mutton Kheema Masala</h3>
+                            <span class="menu-price">₹460</span>
+                        </div>
+                        <p>Spicy minced mutton cooked with fragrant Indian spices in semi-gravy.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="mutton" data-name="mutton kolhapuri">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/mutton-kolhapuri.jpg" alt="Mutton Kolhapuri">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Mutton Kolhapuri</h3>
+                            <span class="menu-price">₹460</span>
+                        </div>
+                        <p>Tender mutton cooked in a spicy traditional Kolhapuri masala.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="mutton" data-name="mutton malwani">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/mutton-malwani.jpg" alt="Mutton Malwani">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Mutton Malwani</h3>
+                            <span class="menu-price">₹490</span>
+                        </div>
+                        <p>Slow-cooked mutton prepared with rich Malwani spices and served with sukka.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="mutton" data-name="mutton masala">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/mutton-masala.jpg" alt="Mutton Masala">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Mutton Masala</h3>
+                            <span class="menu-price">₹440</span>
+                        </div>
+                        <p>Mutton pieces cooked in thick onion-based gravy with aromatic spices.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="mutton" data-name="mutton rara">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/non-veg/mutton-rara.jpg" alt="Mutton Rara">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Mutton Rara</h3>
+                            <span class="menu-price">₹520</span>
+                        </div>
+                        <p>Mutton cooked with minced mutton and traditional aromatic spices in rich gravy.</p>
+                        <div class="menu-meta"><span class="nonveg">● Non-Veg</span></div>
+                    </div>
+                </div>
+
+
+                <!-- =====================================================
+     PANEER / VEG MAIN COURSE
+===================================================== -->
+
+                <div class="menu-card" data-category="veg" data-name="paneer butter masala">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/paneer-butter-masala.jpg" alt="Paneer Butter Masala">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Paneer Butter Masala</h3>
+                            <span class="menu-price">₹410</span>
+                        </div>
+                        <p>Soft paneer cooked in creamy tomato, butter and cashew gravy.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="paneer kadai">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/paneer-kadai.jpg" alt="Paneer Kadai">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Paneer Kadai</h3>
+                            <span class="menu-price">₹440</span>
+                        </div>
+                        <p>Paneer cooked with capsicum, onion and aromatic kadai masala.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="paneer masala">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/paneer-masala.jpg" alt="Paneer Masala">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Paneer Masala</h3>
+                            <span class="menu-price">₹380</span>
+                        </div>
+                        <p>Soft paneer cooked in flavorful Indian onion and tomato masala.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="palak paneer">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/palak-paneer.jpg" alt="Palak Paneer">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Palak Paneer</h3>
+                            <span class="menu-price">₹380</span>
+                        </div>
+                        <p>Paneer cubes cooked in a rich and creamy spinach gravy.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="mutter paneer">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/mutter-paneer.jpg" alt="Mutter Paneer">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Mutter Paneer</h3>
+                            <span class="menu-price">₹350</span>
+                        </div>
+                        <p>Paneer and green peas cooked together in a delicious Indian gravy.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="paneer chatpata">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/paneer-chatpata.jpg" alt="Paneer Chatpata">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Paneer Chatpata</h3>
+                            <span class="menu-price">₹520</span>
+                        </div>
+                        <p>Paneer prepared with a spicy, tangy and flavorful masala.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="paneer lababdaar">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/paneer-lababdaar.jpg" alt="Paneer Lababdaar">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Paneer Lababdaar</h3>
+                            <span class="menu-price">₹540</span>
+                        </div>
+                        <p>Rich paneer preparation cooked in a creamy and aromatic gravy.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="paneer mussallam">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/paneer-mussallam.jpg" alt="Paneer Mussallam">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Paneer Mussallam</h3>
+                            <span class="menu-price">₹520</span>
+                        </div>
+                        <p>Paneer cooked with Indian spices in a rich onion-based gravy.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="paneer toofani">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/paneer-toofani.jpg" alt="Paneer Toofani">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Paneer Toofani</h3>
+                            <span class="menu-price">₹500</span>
+                        </div>
+                        <p>Spicy paneer preparation loaded with bold Indian flavours.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg tandoor" data-name="paneer tikka">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/paneer-tikka.jpg" alt="Paneer Tikka">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Paneer Tikka</h3>
+                            <span class="menu-price">₹470</span>
+                        </div>
+                        <p>Paneer cubes marinated with yogurt and spices, grilled over charcoal.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="veg kolhapuri">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/veg-kolhapuri.jpg" alt="Veg Kolhapuri">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Veg Kolhapuri</h3>
+                            <span class="menu-price">₹370</span>
+                        </div>
+                        <p>Mixed vegetables cooked in spicy and flavorful Kolhapuri masala.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+
+                <!-- =====================================================
+     VEG STARTERS
+===================================================== -->
+
+                <div class="menu-card" data-category="veg" data-name="veg manchurian">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/veg-manchurian.jpg" alt="Veg Manchurian">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Veg Manchurian</h3>
+                            <span class="menu-price">₹300</span>
+                        </div>
+                        <p>Fried vegetable balls cooked in a flavorful garlic and chilli Manchurian sauce.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="veg crispy">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/veg-crispy.jpg" alt="Veg Crispy">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Veg Crispy</h3>
+                            <span class="menu-price">₹410</span>
+                        </div>
+                        <p>Assorted vegetables fried until crispy and tossed in spicy garlic sauce.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="veg hot pan">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/veg-hot-pan.jpg" alt="Veg Hot Pan">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Veg Hot Pan</h3>
+                            <span class="menu-price">₹350</span>
+                        </div>
+                        <p>Vegetables cooked in garlic chilli Manchurian sauce and served sizzling.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+
+                <!-- =====================================================
+     DAL / RICE
+===================================================== -->
+
+                <div class="menu-card" data-category="veg" data-name="dal tadka">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/dal-tadka.jpg" alt="Dal Tadka">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Dal Tadka</h3>
+                            <span class="menu-price">₹220</span>
+                        </div>
+                        <p>Wholesome yellow dal finished with aromatic Indian tadka.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="dal fry">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/dal-fry.jpg" alt="Dal Fry">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Dal Fry</h3>
+                            <span class="menu-price">₹210</span>
+                        </div>
+                        <p>Traditional Punjabi-style yellow lentils tempered with aromatic spices.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="dal khichadi">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/dal-khichadi.jpg" alt="Dal Khichadi">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Dal Khichadi</h3>
+                            <span class="menu-price">₹230</span>
+                        </div>
+                        <p>Comforting yellow lentils blended with rice and finished with coriander and ghee.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="jeera rice">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/jeera-rice.jpg" alt="Jeera Rice">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Jeera Rice</h3>
+                            <span class="menu-price">₹140</span>
+                        </div>
+                        <p>Fragrant basmati rice tempered with cumin and aromatic spices.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="masala rice">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/masala-rice.jpg" alt="Masala Rice">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Masala Rice</h3>
+                            <span class="menu-price">₹230</span>
+                        </div>
+                        <p>Rice tossed with flavorful Indian masala and aromatic spices.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="paneer pulav">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/paneer-pulav.jpg" alt="Paneer Pulav">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Paneer Pulav</h3>
+                            <span class="menu-price">₹350</span>
+                        </div>
+                        <p>Aromatic rice tossed with paneer cubes, ghee and coriander.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="veg pulav">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/veg-pulav.jpg" alt="Veg Pulav">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Veg Pulav</h3>
+                            <span class="menu-price">₹230</span>
+                        </div>
+                        <p>Aromatic rice tossed with diced vegetables, ghee and fresh coriander.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="veg" data-name="steam rice">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/steam-rice.jpg" alt="Steam Rice">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Steam Rice</h3>
+                            <span class="menu-price">₹110</span>
+                        </div>
+                        <p>Simple steamed rice, perfect with curries, dal and gravies.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+
+                <!-- =====================================================
+     NAAN / ROTI
+===================================================== -->
+
+                <div class="menu-card" data-category="tandoor veg" data-name="garlic butter naan">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/garlic-butter-naan.jpg" alt="Garlic Butter Naan">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Garlic Butter Naan</h3>
+                            <span class="menu-price">₹110</span>
+                        </div>
+                        <p>Soft naan baked in a clay oven and topped with fresh garlic, butter and coriander.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="tandoor veg" data-name="cheese garlic naan">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/cheese-garlic-naan.jpg" alt="Cheese Garlic Naan">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Cheese Garlic Naan</h3>
+                            <span class="menu-price">₹180</span>
+                        </div>
+                        <p>Clay oven baked naan topped with melted cheese, chopped garlic and butter.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="tandoor veg" data-name="butter naan">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/butter-naan.jpg" alt="Butter Naan">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Butter Naan</h3>
+                            <span class="menu-price">₹95</span>
+                        </div>
+                        <p>Traditional mixed flour naan baked in a clay oven and finished with butter.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="tandoor veg" data-name="naan">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/naan.jpg" alt="Naan">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Naan</h3>
+                            <span class="menu-price">₹80</span>
+                        </div>
+                        <p>Soft traditional Indian bread baked in a clay oven.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="tandoor veg" data-name="tandoor roti">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/tandoor-roti.jpg" alt="Tandoor Roti">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Tandoor Roti</h3>
+                            <span class="menu-price">₹35</span>
+                        </div>
+                        <p>Traditional wheat bread baked directly in a clay tandoor.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="tandoor veg" data-name="butter roti">
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/butter-roti.jpg" alt="Butter Roti">
+                    <div class="menu-content">
+                        <div class="menu-title">
+                            <h3>Butter Roti</h3>
+                            <span class="menu-price">₹40</span>
+                        </div>
+                        <p>Traditional wheat roti finished with a generous layer of butter.</p>
+                        <div class="menu-meta"><span class="veg">● Veg</span></div>
+                    </div>
+                </div>
+
+
+                <!-- =====================================================
+     DESSERT
+===================================================== -->
+
+                <div class="menu-card" data-category="veg" data-name="gulab jamun">
+
+                    <img src="C:/ZTH_HTML_CSS/Sai_Krupa/images/veg/gulab-jamun.jpg" alt="Gulab Jamun">
+
+                    <div class="menu-content">
+
+                        <div class="menu-title">
+                            <h3>Gulab Jamun</h3>
+                            <span class="menu-price">₹110</span>
+                        </div>
+
+                        <p>
+                            Soft and delicious Indian sweet served
+                            in fragrant sugar syrup.
+                        </p>
+
+                        <div class="menu-meta">
+                            <span class="veg">● Veg</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="menu-more-wrap">
+
+                <button type="button" id="showMoreBtn" class="show-more-btn" onclick="toggleMenuItems()">
+
+                    Show More <span>↓</span>
+
+                </button>
+
+                <button class="book-order-btn" onclick="openBooking()">
+                    <i class="fa-solid fa-calendar-check"></i> Book Order
+                </button>
+
+            </div>
+
+
+    </section>
+
+
+
+    </div>
+
+
+    </section>
+
+
+    <!-- ============================
+     CUSTOMER REVIEWS
+============================= -->
+
+    <section class="reviews-section" id="reviews">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Customer Reviews
+                </div>
+
+                <h2>
+                    What Our Customers Say
+                </h2>
+
+                <p>
+                    We love hearing from our guests. Share your
+                    experience with Shree Sai Krupa.
+                </p>
+
+            </div>
+
+
+            <!-- Rating Summary -->
+
+            <div class="review-summary">
+
+                <div class="rating-number">
+                    <strong>5.0</strong>
+
+                    <div class="big-stars">
+                        ★★★★★
+                    </div>
+
+                    <span>Customer Rating</span>
+                </div>
+
+
+                <div class="rating-info">
+
+                    <h3>
+                        Loved by our customers ❤️
+                    </h3>
+
+                    <p>
+                        Enjoyed your food and experience?
+                        Leave a review and help others discover
+                        Shree Sai Krupa.
+                    </p>
+
+                    <button class="review-btn" onclick="openReviewForm()">
+                        ⭐ Write a Review
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Reviews -->
+
+            <div class="reviews-grid" id="reviewsGrid">
+
+                <!-- Sample Review -->
+
+                <div class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                R
+                            </div>
+
+                            <div>
+                                <strong>Rahul</strong>
+                                <span>Customer</span>
+                            </div>
+
+                        </div>
+
+                        <span class="review-date">
+                            Recent
+                        </span>
+
+                    </div>
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Great biryani and excellent tandoori chicken.
+                        The food was tasty and portions were generous.
+                    </p>
+
+                </div>
+
+
+                <div class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                P
+                            </div>
+
+                            <div>
+                                <strong>Priya</strong>
+                                <span>Customer</span>
+                            </div>
+
+                        </div>
+
+                        <span class="review-date">
+                            Recent
+                        </span>
+
+                    </div>
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Loved the creamy tandoori chicken.
+                        Nice atmosphere and a good variety of
+                        veg and non-veg dishes.
+                    </p>
+
+                </div>
+
+                <!-- ================================
+     BOOK ORDER MODAL
+================================ -->
+
+                <div class="booking-overlay" id="bookingModal">
+
+                    <div class="booking-box">
+
+                        <button class="booking-close" onclick="closeBooking()">
+                            &times;
+                        </button>
+
+                        <div class="booking-header">
+                            <i class="fa-solid fa-utensils"></i>
+                            <h2>Book Your Order</h2>
+                            <p>Shree Sai Krupa Veg • Non-Veg Restaurant</p>
+                        </div>
+
+                        <form id="bookingForm" onsubmit="submitBooking(event)">
+
+                            <div class="form-group">
+                                <label>Customer Name</label>
+                                <input type="text" id="customerName" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Mobile Number</label>
+                                <input type="tel" id="customerPhone" placeholder="Enter mobile number" maxlength="10"
+                                    pattern="[0-9]{10}" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Select Food Items</label>
+
+                                <div class="booking-menu-list" id="bookingMenuList">
+                                    <!-- Menu items will be generated automatically -->
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+                                    <label>Quantity</label>
+
+                                    <input type="number" id="quantity" min="1" value="1" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Order Type</label>
+
+                                    <select id="orderType" required>
+                                        <option value="">-- Select --</option>
+                                        <option value="Dine-in">Dine-in</option>
+                                        <option value="Takeaway">Takeaway</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+                                    <label>Date</label>
+
+                                    <input type="date" id="bookingDate" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Time</label>
+
+                                    <input type="time" id="bookingTime" required>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>Special Request</label>
+
+                                <textarea id="specialRequest" rows="3"
+                                    placeholder="Any special request? (Optional)"></textarea>
+                            </div>
+
+                            <button type="submit" class="confirm-booking-btn">
+                                <i class="fa-solid fa-check"></i>
+                                Confirm Booking
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+
+                <!-- ================================
+     BOOKING SUCCESS MESSAGE
+================================ -->
+
+                <div class="success-overlay" id="successModal">
+
+                    <div class="success-box">
+
+                        <div class="success-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <h2>Booking Confirmed!</h2>
+
+                        <p>
+                            Thank you for booking with
+                            <strong>Shree Sai Krupa</strong>.
+                        </p>
+
+                        <div class="booking-details" id="bookingDetails">
+                        </div>
+
+                        <button class="success-btn" onclick="closeSuccess()">
+                            Done
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                A
+                            </div>
+
+                            <div>
+                                <strong>Akshay</strong>
+                                <span>Customer</span>
+                            </div>
+
+                        </div>
+
+                        <span class="review-date">
+                            Recent
+                        </span>
+
+                    </div>
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Perfect place for late-night food.
+                        Chicken biryani and butter chicken
+                        were delicious.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ============================
+     REVIEW MODAL
+============================= -->
+
+    <div class="review-modal" id="reviewModal">
+
+        <div class="review-modal-box">
+
+            <button class="review-close" onclick="closeReviewForm()">
+                ×
+            </button>
+
+            <div class="review-modal-heading">
+
+                <div class="eyebrow">
+                    Your Feedback
+                </div>
+
+                <h2>
+                    Write a Review
+                </h2>
+
+                <p>
+                    Tell us about your experience.
+                </p>
+
+            </div>
+
+
+            <form id="reviewForm">
+
+                <label>
+                    Your Name
+                </label>
+
+                <input type="text" id="reviewName" placeholder="Enter your name" required>
+
+
+                <label>
+                    Your Rating
+                </label>
+
+                <div class="star-selector">
+
+                    <button type="button" data-rating="1">★</button>
+                    <button type="button" data-rating="2">★</button>
+                    <button type="button" data-rating="3">★</button>
+                    <button type="button" data-rating="4">★</button>
+                    <button type="button" data-rating="5">★</button>
+
+                </div>
+
+
+                <input type="hidden" id="reviewRating" value="5">
+
+
+                <label>
+                    Your Review
+                </label>
+
+                <textarea id="reviewText" rows="5" placeholder="Share your experience..." required></textarea>
+
+
+                <button type="submit" class="submit-review">
+                    ⭐ Submit Review
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ============================
+     CTA
+============================= -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <h2>Hungry Yet?</h2>
+
+            <p>
+                Visit Shree Sai Krupa for delicious Indian
+                food, biryani, tandoori specialities and
+                much more.
+            </p>
+
+            <a href="tel:07276803030" class="btn btn-white">
+                📞 072768 03030
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================
+     CONTACT
+============================= -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Visit Us
+                </div>
+
+                <h2>
+                    Find Our Restaurant
+                </h2>
+
+                <p>
+                    Kharadi Road, Chandan Nagar, Pune.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-card">
+
+                    <h3>
+                        Restaurant Information
+                    </h3>
+
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">📍</div>
+
+                        <div>
+
+                            <strong>Address</strong>
+
+                            <span>
+                                Kharadi Rd, Chandan Nagar,
+                                Pune, Maharashtra 411014
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">📞</div>
+
+                        <div>
+
+                            <strong>Phone</strong>
+
+                            <span>
+                                072768 03030
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">🕐</div>
+
+                        <div>
+
+                            <strong>Hours</strong>
+
+                            <span>
+                                Open • Closes 5 PM • Reopens 7 PM
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-row">
+
+                        <div class="contact-icon">📱</div>
+
+                        <div>
+
+                            <strong>Follow Us</strong>
+
+                            <div class="contact-socials">
+
+                                <a href="https://www.instagram.com/saikrupa_veg_nonveg/" target="_blank"
+                                    rel="noopener noreferrer" class="contact-social instagram-contact">
+                                    ◎ Instagram
+                                </a>
+
+                                <a href="YOUR_FACEBOOK_PAGE_URL" target="_blank" rel="noopener noreferrer"
+                                    class="contact-social facebook-contact">
+                                    f Facebook
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Shree+Sai+Krupa+Veg+Non+Veg+Restaurant+Chandan+Nagar+Pune"
+                        target="_blank" class="btn btn-primary">
+
+                        📍 Get Directions
+
+                    </a>
+
+                </div>
+
+
+                <div class="map">
+
+                    <iframe src="https://www.google.com/maps?q=Chandan%20Nagar%20Pune%20Maharashtra&output=embed"
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================
+     FOOTER
+============================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <h3>
+                        Shree Sai Krupa
+                    </h3>
+
+                    <p>
+                        Veg & Non-Veg restaurant serving
+                        Indian favourites, biryani, tandoori,
+                        curries, naan and more in Pune.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#contact">Contact</a>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Contact & Social</h3>
+
+                    <a href="tel:07276803030">
+                        📞 072768 03030
+                    </a>
+
+                    <a href="tel:9156537070">
+                        📞 9156537070
+                    </a>
+
+                    <p>
+                        📍 Chandan Nagar, Pune
+                    </p>
+
+                    <div class="social-links">
+
+                        <!-- Facebook -->
+                        <a href="YOUR_FACEBOOK_PAGE_URL" target="_blank" rel="noopener noreferrer"
+                            class="social facebook">
+                            <span>f</span>
+                            Facebook
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/saikrupa_veg_nonveg/" target="_blank"
+                            rel="noopener noreferrer" class="social instagram">
+                            <span>◎</span>
+                            Instagram
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="copyright">
+
+                    © 2026 Shree Sai Krupa Veg Non-Veg Restaurant
+
+                </div>
+
+            </div>
+
+    </footer>
+
+
+
+    <!-- ============================
+     FLOATING BUTTONS
+============================= -->
+
+    <div class="floating">
+
+        <a class="float whatsapp" href="https://wa.me/917276803030" target="_blank">
+            💬
+        </a>
+
+        <a class="float call" href="tel:07276803030">
+            📞
+        </a>
+
+    </div>
+
+
+
+    <script>
+
+    /* =========================================================
+       MOBILE NAVIGATION
+    ========================================================= */
+
+    function toggleMenu() {
+
+        document
+            .getElementById("nav")
+            .classList.toggle("open");
+
+    }
+
+
+    /* =========================================================
+       MENU SHOW MORE / SHOW LESS
+    ========================================================= */
+
+    const INITIAL_MENU_ITEMS = 6;
+
+    let menuExpanded = false;
+    let activeCategory = "all";
+
+
+    /* =========================================================
+       GET ONLY ACTUAL MENU CARDS
+    ========================================================= */
+
+    function getMenuCards() {
+
+        return Array.from(
+            document.querySelectorAll("#menuGrid > .menu-card")
+        );
+
+    }
+
+
+    /* =========================================================
+       UPDATE MENU
+       Handles:
+       - Show More
+       - Show Less
+       - Category Filter
+       - Search
+    ========================================================= */
+
+    function updateMenu() {
+
+        const cards = getMenuCards();
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+        const query = searchInput
+            ? searchInput.value.toLowerCase().trim()
+            : "";
+
+
+        let matchingCards = [];
+
+
+        /* -----------------------------------------
+           FIND MATCHING CARDS
+        ----------------------------------------- */
+
+        cards.forEach(function (card) {
+
+            const categories =
+                (card.dataset.category || "")
+                    .toLowerCase()
+                    .split(" ");
+
+
+            const name =
+                (card.dataset.name || "")
+                    .toLowerCase();
+
+
+            const categoryMatch =
+                activeCategory === "all" ||
+                categories.includes(activeCategory);
+
+
+            const searchMatch =
+                name.includes(query);
+
+
+            if (categoryMatch && searchMatch) {
+
+                matchingCards.push(card);
+
+            }
+
+
+            /* Hide all cards first */
+
+            card.style.display = "none";
+
+        });
+
+
+        /* -----------------------------------------
+           DISPLAY MATCHING CARDS
+        ----------------------------------------- */
+
+        matchingCards.forEach(function (card, index) {
+
+            if (
+                menuExpanded ||
+                index < INITIAL_MENU_ITEMS
+            ) {
+
+                card.style.display = "flex";
+
+            }
+
+        });
+
+
+        /* Update Show More button */
+
+        updateShowMoreButton(
+            matchingCards.length
+        );
+
+    }
+
+
+    /* =========================================================
+       SHOW MORE / SHOW LESS BUTTON
+    ========================================================= */
+
+    function updateShowMoreButton(totalItems) {
+
+        const button =
+            document.getElementById("showMoreBtn");
+
+
+        if (!button) {
+            return;
+        }
+
+
+        /* If 6 or fewer items, hide button */
+
+        if (totalItems <= INITIAL_MENU_ITEMS) {
+
+            button.style.display = "none";
+
+            return;
+
+        }
+
+
+        /* Show button */
+
+        button.style.display = "inline-flex";
+
+
+        if (menuExpanded) {
+
+            button.innerHTML =
+                'Show Less <span>↑</span>';
+
+            button.setAttribute(
+                "aria-label",
+                "Show less menu items"
+            );
+
+        }
+        else {
+
+            button.innerHTML =
+                'Show More <span>↓</span>';
+
+            button.setAttribute(
+                "aria-label",
+                "Show more menu items"
+            );
+
+        }
+
+    }
+
+
+    /* =========================================================
+       TOGGLE SHOW MORE / SHOW LESS
+    ========================================================= */
+
+    function toggleMenuItems() {
+
+        menuExpanded = !menuExpanded;
+
+        updateMenu();
+
+    }
+
+
+    /* =========================================================
+       FILTER MENU
+    ========================================================= */
+
+    function filterFood(category, button) {
+
+        activeCategory = category;
+
+        /* Start collapsed when category changes */
+
+        menuExpanded = false;
+
+
+        /* Remove active class */
+
+        const filters =
+            document.querySelectorAll(".filter");
+
+
+        filters.forEach(function (item) {
+
+            item.classList.remove("active");
+
+        });
+
+
+        /* Add active class */
+
+        if (button) {
+
+            button.classList.add("active");
+
+        }
+
+
+        updateMenu();
+
+    }
+
+
+    /* =========================================================
+       SEARCH MENU
+    ========================================================= */
+
+    function searchFood() {
+
+        updateMenu();
+
+    }
+
+
+    /* =========================================================
+       CLOSE MOBILE NAVIGATION
+    ========================================================= */
+
+    function setupMobileNavigation() {
+
+        document
+            .querySelectorAll("nav a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        const nav =
+                            document.getElementById("nav");
+
+                        if (nav) {
+
+                            nav.classList.remove("open");
+
+                        }
+
+                    }
+                );
+
+            });
+
+    }
+
+
+    /* =========================================================
+       CUSTOMER REVIEWS
+    ========================================================= */
+
+    let selectedRating = 5;
+
+
+    /* =========================================================
+       OPEN REVIEW FORM
+    ========================================================= */
+
+    function openReviewForm() {
+
+        const modal =
+            document.getElementById("reviewModal");
+
+        if (modal) {
+
+            modal.classList.add("show");
+
+        }
+
+    }
+
+
+    /* =========================================================
+       CLOSE REVIEW FORM
+    ========================================================= */
+
+    function closeReviewForm() {
+
+        const modal =
+            document.getElementById("reviewModal");
+
+        if (modal) {
+
+            modal.classList.remove("show");
+
+        }
+
+    }
+
+
+    /* =========================================================
+       STAR RATING
+    ========================================================= */
+
+    function setupStarRating() {
+
+        const starButtons =
+            document.querySelectorAll(
+                ".star-selector button"
+            );
+
+
+        starButtons.forEach(function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    selectedRating =
+                        Number(
+                            this.dataset.rating
+                        );
+
+
+                    const ratingInput =
+                        document.getElementById(
+                            "reviewRating"
+                        );
+
+
+                    if (ratingInput) {
+
+                        ratingInput.value =
+                            selectedRating;
+
+                    }
+
+
+                    /* Update stars */
+
+                    starButtons.forEach(
+                        function (star) {
+
+                            if (
+                                Number(
+                                    star.dataset.rating
+                                ) <= selectedRating
+                            ) {
+
+                                star.classList.add(
+                                    "selected"
+                                );
+
+                            }
+                            else {
+
+                                star.classList.remove(
+                                    "selected"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+        });
+
+
+        /* Default 5 stars */
+
+        starButtons.forEach(function (star) {
+
+            star.classList.add("selected");
+
+        });
+
+    }
+
+
+    /* =========================================================
+       SUBMIT CUSTOMER REVIEW
+    ========================================================= */
+
+    function setupReviewForm() {
+
+        const reviewForm =
+            document.getElementById("reviewForm");
+
+
+        if (!reviewForm) {
+            return;
+        }
+
+
+        reviewForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                /* -----------------------------------------
+                   GET CUSTOMER NAME
+                ----------------------------------------- */
+
+                const nameInput =
+                    document.getElementById(
+                        "reviewName"
+                    );
+
+
+                const reviewInput =
+                    document.getElementById(
+                        "reviewText"
+                    );
+
+
+                const name =
+                    nameInput
+                        ? nameInput.value.trim()
+                        : "";
+
+
+                const review =
+                    reviewInput
+                        ? reviewInput.value.trim()
+                        : "";
+
+
+                /* -----------------------------------------
+                   VALIDATION
+                ----------------------------------------- */
+
+                if (!name) {
+
+                    alert(
+                        "Please enter your name."
+                    );
+
+                    if (nameInput) {
+                        nameInput.focus();
+                    }
+
+                    return;
+
+                }
+
+
+                if (!review) {
+
+                    alert(
+                        "Please write your review."
+                    );
+
+                    if (reviewInput) {
+                        reviewInput.focus();
+                    }
+
+                    return;
+
+                }
+
+
+                /* -----------------------------------------
+                   CREATE STARS
+                ----------------------------------------- */
+
+                const stars =
+                    "★".repeat(selectedRating) +
+                    "☆".repeat(
+                        5 - selectedRating
+                    );
+
+
+                /* -----------------------------------------
+                   AVATAR
+                ----------------------------------------- */
+
+                const avatar =
+                    name.charAt(0).toUpperCase();
+
+
+                /* -----------------------------------------
+                   CREATE REVIEW CARD
+                ----------------------------------------- */
+
+                const reviewCard =
+                    document.createElement("div");
+
+
+                reviewCard.className =
+                    "review-card";
+
+
+                reviewCard.innerHTML = `
+
+                    <div class="review-top">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                ${escapeHTML(avatar)}
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    ${escapeHTML(name)}
+                                </strong>
+
+                                <span>
+                                    Customer
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <span class="review-date">
+                            Just now
+                        </span>
+
+                    </div>
+
+
+                    <div class="review-stars">
+                        ${stars}
+                    </div>
+
+
+                    <p>
+                        ${escapeHTML(review)}
+                    </p>
+
+                `;
+
+
+                /* -----------------------------------------
+                   ADD REVIEW TO PAGE
+                ----------------------------------------- */
+
+                const reviewsGrid =
+                    document.getElementById(
+                        "reviewsGrid"
+                    );
+
+
+                if (reviewsGrid) {
+
+                    reviewsGrid.prepend(
+                        reviewCard
+                    );
+
+                }
+
+
+                /* -----------------------------------------
+                   SAVE REVIEW
+                ----------------------------------------- */
+
+                saveReview({
+
+                    name: name,
+
+                    review: review,
+
+                    rating: selectedRating
+
+                });
+
+
+                /* -----------------------------------------
+                   RESET FORM
+                ----------------------------------------- */
+
+                reviewForm.reset();
+
+
+                selectedRating = 5;
+
+
+                const starButtons =
+                    document.querySelectorAll(
+                        ".star-selector button"
+                    );
+
+
+                starButtons.forEach(
+                    function (star) {
+
+                        star.classList.add(
+                            "selected"
+                        );
+
+                    }
+                );
+
+
+                const ratingInput =
+                    document.getElementById(
+                        "reviewRating"
+                    );
+
+
+                if (ratingInput) {
+
+                    ratingInput.value = 5;
+
+                }
+
+
+                /* Close modal */
+
+                closeReviewForm();
+
+
+                /* Confirmation */
+
+                alert(
+                    "Thank you for your review! ❤️"
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       SAVE REVIEW TO LOCAL STORAGE
+    ========================================================= */
+
+    function saveReview(review) {
+
+        let reviews = [];
+
+
+        try {
+
+            reviews =
+                JSON.parse(
+                    localStorage.getItem(
+                        "saikrupaReviews"
+                    )
+                ) || [];
+
+        }
+        catch (error) {
+
+            reviews = [];
+
+        }
+
+
+        reviews.push(review);
+
+
+        localStorage.setItem(
+            "saikrupaReviews",
+            JSON.stringify(reviews)
+        );
+
+    }
+
+
+    /* =========================================================
+       LOAD SAVED REVIEWS
+    ========================================================= */
+
+    function loadReviews() {
+
+        const reviewsGrid =
+            document.getElementById(
+                "reviewsGrid"
+            );
+
+
+        if (!reviewsGrid) {
+            return;
+        }
+
+
+        let reviews = [];
+
+
+        try {
+
+            reviews =
+                JSON.parse(
+                    localStorage.getItem(
+                        "saikrupaReviews"
+                    )
+                ) || [];
+
+        }
+        catch (error) {
+
+            reviews = [];
+
+        }
+
+
+        /*
+           Display newest reviews first.
+        */
+
+        reviews.reverse().forEach(
+            function (review) {
+
+                const reviewCard =
+                    document.createElement("div");
+
+
+                reviewCard.className =
+                    "review-card";
+
+
+                const rating =
+                    Math.max(
+                        1,
+                        Math.min(
+                            5,
+                            Number(review.rating) || 5
+                        )
+                    );
+
+
+                const stars =
+                    "★".repeat(rating) +
+                    "☆".repeat(5 - rating);
+
+
+                const avatar =
+                    review.name
+                        ? review.name
+                            .charAt(0)
+                            .toUpperCase()
+                        : "C";
+
+
+                reviewCard.innerHTML = `
+
+                    <div class="review-top">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                ${escapeHTML(avatar)}
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    ${escapeHTML(
+                                        review.name || "Customer"
+                                    )}
+                                </strong>
+
+                                <span>
+                                    Customer
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <span class="review-date">
+                            Customer Review
+                        </span>
+
+                    </div>
+
+
+                    <div class="review-stars">
+                        ${stars}
+                    </div>
+
+
+                    <p>
+                        ${escapeHTML(
+                            review.review || ""
+                        )}
+                    </p>
+
+                `;
+
+
+                reviewsGrid.appendChild(
+                    reviewCard
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       PREVENT HTML INJECTION
+    ========================================================= */
+
+    function escapeHTML(text) {
+
+        return String(text)
+
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+
+            .replace(
+                /</g,
+                "&lt;"
+            )
+
+            .replace(
+                />/g,
+                "&gt;"
+            )
+
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+
+            .replace(
+                /'/g,
+                "&#039;"
+            );
+
+    }
+
+
+    /* =========================================================
+       REVIEW MODAL
+       CLOSE WHEN CLICKING OUTSIDE
+    ========================================================= */
+
+    function setupReviewModal() {
+
+        const reviewModal =
+            document.getElementById(
+                "reviewModal"
+            );
+
+
+        if (!reviewModal) {
+            return;
+        }
+
+
+        reviewModal.addEventListener(
+            "click",
+            function (event) {
+
+                if (event.target === this) {
+
+                    closeReviewForm();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       LOAD ALL MENU ITEMS INTO BOOKING
+    ========================================================= */
+
+    function loadBookingMenu() {
+
+        const bookingMenuList =
+            document.getElementById(
+                "bookingMenuList"
+            );
+
+
+        if (!bookingMenuList) {
+            return;
+        }
+
+
+        const menuCards =
+            document.querySelectorAll(
+                "#menuGrid > .menu-card"
+            );
+
+
+        bookingMenuList.innerHTML = "";
+
+
+        menuCards.forEach(function (card) {
+
+            const nameElement =
+                card.querySelector(
+                    ".menu-title h3"
+                );
+
+
+            const priceElement =
+                card.querySelector(
+                    ".menu-price"
+                );
+
+
+            if (!nameElement || !priceElement) {
+                return;
+            }
+
+
+            const foodName =
+                nameElement.textContent.trim();
+
+
+            const foodPrice =
+                priceElement.textContent.trim();
+
+
+            /* Create label */
+
+            const label =
+                document.createElement("label");
+
+
+            label.className =
+                "booking-food-item";
+
+
+            /*
+               Escape food name before putting it
+               into HTML.
+            */
+
+            const safeFoodName =
+                escapeHTML(foodName);
+
+
+            const safeFoodPrice =
+                escapeHTML(foodPrice);
+
+
+            label.innerHTML = `
+
+                <div class="booking-food-left">
+
+                    <input
+                        type="checkbox"
+                        name="foodItem"
+                        value="${safeFoodName}"
+                    >
+
+                    <span class="booking-food-info">
+
+                        <span class="booking-food-name">
+                            ${safeFoodName}
+                        </span>
+
+                        <span class="booking-food-price">
+                            ${safeFoodPrice}
+                        </span>
+
+                    </span>
+
+                </div>
+
+
+                <div class="food-quantity">
+
+                    <button
+                        type="button"
+                        onclick="decreaseQuantity(this)"
+                    >
+                        −
+                    </button>
+
+
+                    <input
+                        type="number"
+                        value="1"
+                        min="1"
+                        max="20"
+                        readonly
+                    >
+
+
+                    <button
+                        type="button"
+                        onclick="increaseQuantity(this)"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            `;
+
+
+            /* Checkbox */
+
+            const checkbox =
+                label.querySelector(
+                    'input[type="checkbox"]'
+                );
+
+
+            checkbox.addEventListener(
+                "change",
+                function () {
+
+                    if (this.checked) {
+
+                        label.classList.add(
+                            "selected"
+                        );
+
+                    }
+                    else {
+
+                        label.classList.remove(
+                            "selected"
+                        );
+
+                    }
+
+                }
+            );
+
+
+            bookingMenuList.appendChild(
+                label
+            );
+
+        });
+
+    }
+
+
+    /* =========================================================
+       SET TODAY'S DATE AS MINIMUM
+    ========================================================= */
+
+    function setMinimumBookingDate() {
+
+        const dateInput =
+            document.getElementById(
+                "bookingDate"
+            );
+
+
+        if (!dateInput) {
+            return;
+        }
+
+
+        const today =
+            new Date();
+
+
+        const year =
+            today.getFullYear();
+
+
+        const month =
+            String(
+                today.getMonth() + 1
+            ).padStart(2, "0");
+
+
+        const day =
+            String(
+                today.getDate()
+            ).padStart(2, "0");
+
+
+        const todayDate =
+            year +
+            "-" +
+            month +
+            "-" +
+            day;
+
+
+        dateInput.min =
+            todayDate;
+
+    }
+
+
+    /* =========================================================
+       OPEN BOOKING
+    ========================================================= */
+
+    function openBooking() {
+
+        loadBookingMenu();
+
+        setMinimumBookingDate();
+
+
+        const bookingModal =
+            document.getElementById(
+                "bookingModal"
+            );
+
+
+        if (bookingModal) {
+
+            bookingModal.classList.add(
+                "active"
+            );
+
+        }
+
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+
+
+    /* =========================================================
+       CLOSE BOOKING
+    ========================================================= */
+
+    function closeBooking() {
+
+        const bookingModal =
+            document.getElementById(
+                "bookingModal"
+            );
+
+
+        if (bookingModal) {
+
+            bookingModal.classList.remove(
+                "active"
+            );
+
+        }
+
+
+        document.body.style.overflow =
+            "";
+
+    }
+
+
+    /* =========================================================
+       INCREASE FOOD QUANTITY
+    ========================================================= */
+
+    function increaseQuantity(button) {
+
+        const quantityInput =
+            button.parentElement.querySelector(
+                'input[type="number"]'
+            );
+
+
+        if (!quantityInput) {
+            return;
+        }
+
+
+        let quantity =
+            parseInt(
+                quantityInput.value
+            ) || 1;
+
+
+        if (quantity < 20) {
+
+            quantity++;
+
+        }
+
+
+        quantityInput.value =
+            quantity;
+
+    }
+
+
+    /* =========================================================
+       DECREASE FOOD QUANTITY
+    ========================================================= */
+
+    function decreaseQuantity(button) {
+
+        const quantityInput =
+            button.parentElement.querySelector(
+                'input[type="number"]'
+            );
+
+
+        if (!quantityInput) {
+            return;
+        }
+
+
+        let quantity =
+            parseInt(
+                quantityInput.value
+            ) || 1;
+
+
+        if (quantity > 1) {
+
+            quantity--;
+
+        }
+
+
+        quantityInput.value =
+            quantity;
+
+    }
+
+
+    /* =========================================================
+       SUBMIT BOOKING
+    ========================================================= */
+
+    function submitBooking(event) {
+
+        event.preventDefault();
+
+
+        /* -----------------------------------------
+           GET CUSTOMER DETAILS
+        ----------------------------------------- */
+
+        const name =
+            document.getElementById(
+                "customerName"
+            ).value.trim();
+
+
+        const phone =
+            document.getElementById(
+                "customerPhone"
+            ).value.trim();
+
+
+        const orderType =
+            document.getElementById(
+                "orderType"
+            ).value;
+
+
+        const date =
+            document.getElementById(
+                "bookingDate"
+            ).value;
+
+
+        const time =
+            document.getElementById(
+                "bookingTime"
+            ).value;
+
+
+        const request =
+            document.getElementById(
+                "specialRequest"
+            ).value.trim();
+
+
+        /* -----------------------------------------
+           VALIDATE PHONE NUMBER
+        ----------------------------------------- */
+
+        if (!/^[0-9]{10}$/.test(phone)) {
+
+            alert(
+                "Please enter a valid 10-digit mobile number."
+            );
+
+            document
+                .getElementById("customerPhone")
+                .focus();
+
+            return;
+
+        }
+
+
+        /* -----------------------------------------
+           GET SELECTED FOOD ITEMS
+        ----------------------------------------- */
+
+        const selectedFoods =
+            document.querySelectorAll(
+                'input[name="foodItem"]:checked'
+            );
+
+
+        if (selectedFoods.length === 0) {
+
+            alert(
+                "Please select at least one food item."
+            );
+
+            return;
+
+        }
+
+
+        /* -----------------------------------------
+           CREATE FOOD LIST
+        ----------------------------------------- */
+
+        let foodList = "";
+
+
+        selectedFoods.forEach(function (item) {
+
+            const foodCard =
+                item.closest(
+                    ".booking-food-item"
+                );
+
+
+            if (!foodCard) {
+                return;
+            }
+
+
+            const foodName =
+                foodCard.querySelector(
+                    ".booking-food-name"
+                ).textContent.trim();
+
+
+            const foodPrice =
+                foodCard.querySelector(
+                    ".booking-food-price"
+                ).textContent.trim();
+
+
+            const quantityInput =
+                foodCard.querySelector(
+                    '.food-quantity input[type="number"]'
+                );
+
+
+            const quantity =
+                quantityInput
+                    ? parseInt(
+                        quantityInput.value
+                    ) || 1
+                    : 1;
+
+
+            /* -----------------------------------------
+               FOOD ITEM IN SUCCESS POPUP
+            ----------------------------------------- */
+
+            foodList += `
+
+                <div class="selected-food">
+
+                    <span>
+                        ${escapeHTML(foodName)}
+                    </span>
+
+                    <span>
+                        × ${quantity}
+                    </span>
+
+                    <strong>
+                        ${escapeHTML(foodPrice)}
+                    </strong>
+
+                </div>
+
+            `;
+
+        });
+
+
+        /* -----------------------------------------
+           GENERATE BOOKING ID
+        ----------------------------------------- */
+
+        const bookingId =
+            "SK" +
+            Math.floor(
+                1000 +
+                Math.random() * 9000
+            );
+
+
+        /* -----------------------------------------
+           SHOW BOOKING DETAILS
+        ----------------------------------------- */
+
+        const bookingDetails =
+            document.getElementById(
+                "bookingDetails"
+            );
+
+
+        if (bookingDetails) {
+
+            bookingDetails.innerHTML = `
+
+                <div>
+                    <strong>Booking ID:</strong>
+                    ${escapeHTML(bookingId)}
+                </div>
+
+
+                <div>
+                    <strong>Name:</strong>
+                    ${escapeHTML(name)}
+                </div>
+
+
+                <div>
+                    <strong>Mobile:</strong>
+                    ${escapeHTML(phone)}
+                </div>
+
+
+                <div style="margin-top:10px;">
+
+                    <strong>
+                        Food Items:
+                    </strong>
+
+
+                    <div class="food-list">
+
+                        ${foodList}
+
+                    </div>
+
+                </div>
+
+
+                <div>
+                    <strong>Order Type:</strong>
+                    ${escapeHTML(orderType)}
+                </div>
+
+
+                <div>
+                    <strong>Date:</strong>
+                    ${escapeHTML(date)}
+                </div>
+
+
+                <div>
+                    <strong>Time:</strong>
+                    ${escapeHTML(time)}
+                </div>
+
+
+                ${
+                    request
+                        ?
+                        `
+                            <div>
+                                <strong>
+                                    Special Request:
+                                </strong>
+
+                                ${escapeHTML(request)}
+                            </div>
+                        `
+                        :
+                        ""
+                }
+
+            `;
+
+        }
+
+
+        /* -----------------------------------------
+           CLOSE BOOKING MODAL
+        ----------------------------------------- */
+
+        const bookingModal =
+            document.getElementById(
+                "bookingModal"
+            );
+
+
+        if (bookingModal) {
+
+            bookingModal.classList.remove(
+                "active"
+            );
+
+        }
+
+
+        /* -----------------------------------------
+           SHOW SUCCESS MODAL
+        ----------------------------------------- */
+
+        const successModal =
+            document.getElementById(
+                "successModal"
+            );
+
+
+        if (successModal) {
+
+            successModal.classList.add(
+                "active"
+            );
+
+        }
+
+
+        /* Keep page locked */
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+
+
+    /* =========================================================
+       CLOSE SUCCESS
+    ========================================================= */
+
+    function closeSuccess() {
+
+        const successModal =
+            document.getElementById(
+                "successModal"
+            );
+
+
+        if (successModal) {
+
+            successModal.classList.remove(
+                "active"
+            );
+
+        }
+
+
+        document.body.style.overflow =
+            "";
+
+
+        const bookingForm =
+            document.getElementById(
+                "bookingForm"
+            );
+
+
+        if (bookingForm) {
+
+            bookingForm.reset();
+
+        }
+
+
+        /*
+           Reset all booking food quantities
+           back to 1.
+        */
+
+        const quantityInputs =
+            document.querySelectorAll(
+                ".food-quantity input[type='number']"
+            );
+
+
+        quantityInputs.forEach(
+            function (input) {
+
+                input.value = 1;
+
+            }
+        );
+
+
+        /*
+           Remove selected checkbox styling.
+        */
+
+        const foodItems =
+            document.querySelectorAll(
+                ".booking-food-item"
+            );
+
+
+        foodItems.forEach(
+            function (item) {
+
+                item.classList.remove(
+                    "selected"
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       BOOKING MODAL OUTSIDE CLICK
+    ========================================================= */
+
+    function setupBookingModal() {
+
+        const bookingModal =
+            document.getElementById(
+                "bookingModal"
+            );
+
+
+        if (bookingModal) {
+
+            bookingModal.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target === this
+                    ) {
+
+                        closeBooking();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        const successModal =
+            document.getElementById(
+                "successModal"
+            );
+
+
+        if (successModal) {
+
+            successModal.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target === this
+                    ) {
+
+                        closeSuccess();
+
+                    }
+
+                }
+            );
+
+        }
+
+    }
+
+
+    /* =========================================================
+       ESC KEY
+       Close Review / Booking / Success Modal
+    ========================================================= */
+
+    function setupEscapeKey() {
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (event.key !== "Escape") {
+                    return;
+                }
+
+
+                /* Close review */
+
+                closeReviewForm();
+
+
+                /* Close booking */
+
+                const bookingModal =
+                    document.getElementById(
+                        "bookingModal"
+                    );
+
+
+                if (
+                    bookingModal &&
+                    bookingModal.classList.contains(
+                        "active"
+                    )
+                ) {
+
+                    closeBooking();
+
+                }
+
+
+                /* Close success */
+
+                const successModal =
+                    document.getElementById(
+                        "successModal"
+                    );
+
+
+                if (
+                    successModal &&
+                    successModal.classList.contains(
+                        "active"
+                    )
+                ) {
+
+                    closeSuccess();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =========================================================
+       INITIALIZE WEBSITE
+    ========================================================= */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+
+            /* -----------------------------------------
+               MENU
+            ----------------------------------------- */
+
+            menuExpanded = false;
+
+            activeCategory = "all";
+
+            updateMenu();
+
+
+            /* -----------------------------------------
+               REVIEWS
+            ----------------------------------------- */
+
+            setupStarRating();
+
+            setupReviewForm();
+
+            setupReviewModal();
+
+            loadReviews();
+
+
+            /* -----------------------------------------
+               MOBILE NAVIGATION
+            ----------------------------------------- */
+
+            setupMobileNavigation();
+
+
+            /* -----------------------------------------
+               BOOKING
+            ----------------------------------------- */
+
+            setupBookingModal();
+
+            setMinimumBookingDate();
+
+
+            /* -----------------------------------------
+               ESC KEY
+            ----------------------------------------- */
+
+            setupEscapeKey();
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
