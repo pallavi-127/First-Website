@@ -1462,7 +1462,717 @@
             letter-spacing: 1px;
         }
 
-            </style>
+        /* =========================================================
+   BOOKING POPUP
+========================================================= */
+
+        .booking-overlay,
+        .success-overlay {
+            position: fixed;
+            inset: 0;
+
+            background: rgba(0, 0, 0, 0.65);
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            z-index: 9999;
+
+            padding: 20px;
+        }
+
+
+        /* SHOW POPUP */
+
+        .booking-overlay.active,
+        .success-overlay.active {
+            display: flex;
+        }
+
+
+        /* =========================================================
+   BOOKING BOX
+========================================================= */
+
+        .booking-box {
+            width: 100%;
+            max-width: 650px;
+
+            max-height: 90vh;
+            overflow-y: auto;
+
+            background: var(--cream);
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            position: relative;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, .30);
+        }
+
+
+        /* CLOSE BUTTON */
+
+        .booking-close {
+            position: absolute;
+
+            top: 12px;
+            right: 15px;
+
+            width: 35px;
+            height: 35px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: var(--red);
+
+            color: #fff;
+
+            font-size: 25px;
+
+            cursor: pointer;
+        }
+
+
+        /* HEADER */
+
+        .booking-header {
+            text-align: center;
+
+            margin-bottom: 20px;
+        }
+
+        .booking-header i {
+            color: var(--red);
+
+            font-size: 30px;
+        }
+
+        .booking-header h2 {
+            margin: 8px 0 5px;
+
+            color: var(--dark);
+        }
+
+        .booking-header p {
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        /* FORM */
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: var(--dark);
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+
+            padding: 11px 12px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 9px;
+
+            outline: none;
+
+            background: #fff;
+
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--red);
+        }
+
+
+        /* DATE + TIME */
+
+        .form-row {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+        }
+
+
+        /* CONFIRM BUTTON */
+
+        .confirm-booking-btn {
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: var(--red);
+
+            color: #fff;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .confirm-booking-btn:hover {
+            background: var(--dark-red);
+        }
+
+
+        /* =========================================================
+   SUCCESS POPUP
+========================================================= */
+
+        .success-box {
+            width: 100%;
+
+            max-width: 500px;
+
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            background: #fff;
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 60px;
+            height: 60px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            background: var(--green);
+
+            color: #fff;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 28px;
+        }
+
+        .success-box h2 {
+            color: var(--dark);
+        }
+
+        .booking-details {
+            text-align: left;
+
+            margin: 20px 0;
+        }
+
+        .detail-row {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding: 8px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .detail-row span {
+            color: var(--muted);
+        }
+
+        .detail-row strong {
+            color: var(--dark);
+
+            text-align: right;
+        }
+
+        .detail-title {
+            margin-top: 15px;
+
+            font-weight: 700;
+
+            color: var(--dark);
+        }
+
+        .special-request {
+            margin-top: 15px;
+
+            padding: 10px;
+
+            background: var(--light);
+
+            border-radius: 8px;
+        }
+
+        .special-request p {
+            margin: 5px 0 0;
+        }
+
+
+        /* SUCCESS BUTTON */
+
+        .success-btn {
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: var(--red);
+
+            color: #fff;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .success-btn:hover {
+            background: var(--dark-red);
+        }
+
+
+        /* =========================================================
+   MOBILE
+========================================================= */
+
+        @media(max-width:600px) {
+
+            .booking-box {
+                padding: 20px;
+
+                max-height: 92vh;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+
+                gap: 0;
+            }
+
+        }
+
+        /* =========================================================
+   BOOKING MENU
+========================================================= */
+
+        .booking-menu-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+
+            max-height: 320px;
+            overflow-y: auto;
+
+            padding: 5px;
+        }
+
+
+        /* Individual food item */
+
+        .booking-food-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 10px;
+
+            padding: 12px;
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            cursor: pointer;
+
+            transition: all .25s ease;
+        }
+
+
+        /* Hover */
+
+        .booking-food-item:hover {
+            border-color: var(--red);
+
+            background: #fff8f3;
+
+            transform: translateY(-1px);
+        }
+
+
+        /* Selected food */
+
+        .booking-food-item.selected {
+            border-color: var(--red);
+
+            background: #fff5ef;
+
+            box-shadow:
+                0 4px 12px rgba(169, 31, 22, .08);
+        }
+
+
+        /* Left side */
+
+        .booking-food-left {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            min-width: 0;
+        }
+
+
+        /* Checkbox */
+
+        .booking-food-item input[type="checkbox"] {
+            width: 18px;
+
+            height: 18px;
+
+            flex-shrink: 0;
+
+            accent-color: var(--red);
+
+            cursor: pointer;
+        }
+
+
+        /* Food information */
+
+        .booking-food-info {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 3px;
+
+            min-width: 0;
+        }
+
+
+        /* Food name */
+
+        .booking-food-name {
+            color: var(--dark);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+        }
+
+
+        /* Food price */
+
+        .booking-food-price {
+            color: var(--red);
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+   FOOD QUANTITY
+========================================================= */
+
+        .food-quantity {
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            flex-shrink: 0;
+        }
+
+
+        /* Quantity buttons */
+
+        .food-quantity button {
+            width: 27px;
+
+            height: 27px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 7px;
+
+            background: #fff;
+
+            color: var(--red);
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            line-height: 1;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: .2s ease;
+        }
+
+
+        /* Quantity button hover */
+
+        .food-quantity button:hover {
+            background: var(--red);
+
+            color: #fff;
+
+            border-color: var(--red);
+        }
+
+
+        /* Quantity number */
+
+        .food-quantity input[type="number"] {
+            width: 38px;
+
+            height: 27px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 7px;
+
+            background: #fff;
+
+            color: var(--dark);
+
+            text-align: center;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            outline: none;
+
+            padding: 3px;
+        }
+
+
+        /* Remove number input arrows */
+
+        .food-quantity input[type="number"]::-webkit-inner-spin-button,
+        .food-quantity input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+
+            margin: 0;
+        }
+
+
+        /* =========================================================
+   BOOKING MENU SCROLLBAR
+========================================================= */
+
+        .booking-menu-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .booking-menu-list::-webkit-scrollbar-track {
+            background: #f5eee7;
+
+            border-radius: 10px;
+        }
+
+        .booking-menu-list::-webkit-scrollbar-thumb {
+            background: var(--red);
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================================================
+   SELECTED FOOD IN SUCCESS POPUP
+========================================================= */
+
+        .food-list {
+            margin-top: 8px;
+        }
+
+
+        .selected-food {
+            display: grid;
+
+            grid-template-columns: 1fr auto auto;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 7px 0;
+
+            border-bottom: 1px dashed var(--border);
+
+            font-size: 13px;
+        }
+
+
+        .selected-food span:first-child {
+            color: var(--dark);
+
+            font-weight: 600;
+        }
+
+
+        .selected-food span:nth-child(2) {
+            color: var(--muted);
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        .selected-food strong {
+            color: var(--red);
+
+            font-size: 12px;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================================================
+   BOOKING RESPONSIVE
+========================================================= */
+
+        @media(max-width:650px) {
+
+            .booking-menu-list {
+                grid-template-columns: 1fr;
+
+                max-height: 350px;
+            }
+
+
+            .booking-food-item {
+                padding: 10px;
+            }
+
+
+            .booking-food-name {
+                font-size: 12px;
+            }
+
+
+            .booking-food-price {
+                font-size: 11px;
+            }
+
+
+            .food-quantity {
+                gap: 3px;
+            }
+
+
+            .food-quantity button {
+                width: 25px;
+
+                height: 25px;
+            }
+
+
+            .food-quantity input[type="number"] {
+                width: 35px;
+
+                height: 25px;
+            }
+
+        }
+
+
+        @media(max-width:400px) {
+
+            .booking-food-item {
+                gap: 5px;
+            }
+
+
+            .booking-food-left {
+                gap: 7px;
+            }
+
+
+            .booking-food-name {
+                font-size: 11px;
+            }
+
+
+            .food-quantity button {
+                width: 23px;
+
+                height: 23px;
+
+                font-size: 16px;
+            }
+
+
+            .food-quantity input[type="number"] {
+                width: 32px;
+
+                height: 23px;
+
+                font-size: 11px;
+            }
+
+        }
+    </style>
 </head>
 
 
@@ -1502,6 +2212,11 @@
                 <a href="#reviews">Reviews</a>
                 <a href="#contact">Contact</a>
 
+                <!-- BOOK ORDER -->
+                <a href="javascript:void(0)" class="nav-booking" onclick="openBooking()">
+                    🍽 Book Order
+                </a>
+
                 <!-- Facebook -->
                 <a class="social-nav facebook-nav" href="YOUR_FACEBOOK_PAGE_URL" target="_blank"
                     rel="noopener noreferrer" aria-label="Facebook">
@@ -1523,11 +2238,6 @@
 
         </div>
     </header>
-
-    </div>
-
-    </header>
-
 
 
     <!-- ============================
@@ -1711,7 +2421,8 @@
 
                 <div class="food-card">
 
-                    <img src="C:/ZTH_HTML_CSS/First-Website/images/veg/paneer-butter-masala.jpg" alt="Paneer Butter Masala">
+                    <img src="C:/ZTH_HTML_CSS/First-Website/images/veg/paneer-butter-masala.jpg"
+                        alt="Paneer Butter Masala">
 
                     <div class="food-body">
 
@@ -1783,7 +2494,8 @@
                 <img class="about-main" src="C:\ZTH_HTML_CSS\First-Website\images\home\sai_krupa.jpg"
                     alt="Indian restaurant interior">
 
-                <img class="about-small" src="C:/ZTH_HTML_CSS/First-Website/images/non-veg/biryani.jpg" alt="Indian curry">
+                <img class="about-small" src="C:/ZTH_HTML_CSS/First-Website/images/non-veg/biryani.jpg"
+                    alt="Indian curry">
 
             </div>
 
@@ -1928,7 +2640,8 @@
                 </div>
 
                 <div class="menu-card" data-category="biryani mutton" data-name="mutton dum biryani">
-                    <img src="C:/ZTH_HTML_CSS/First-Website/images/non-veg/mutton-dum-biryani.jpg" alt="Mutton Dum Biryani">
+                    <img src="C:/ZTH_HTML_CSS/First-Website/images/non-veg/mutton-dum-biryani.jpg"
+                        alt="Mutton Dum Biryani">
                     <div class="menu-content">
                         <div class="menu-title">
                             <h3>Mutton Dum Biryani</h3>
@@ -1953,7 +2666,8 @@
                 </div>
 
                 <div class="menu-card" data-category="biryani veg" data-name="paneer tikka biryani">
-                    <img src="C:/ZTH_HTML_CSS/First-Website/images/veg/paneer-tikka-biryani.jpg" alt="Paneer Tikka Biryani">
+                    <img src="C:/ZTH_HTML_CSS/First-Website/images/veg/paneer-tikka-biryani.jpg"
+                        alt="Paneer Tikka Biryani">
                     <div class="menu-content">
                         <div class="menu-title">
                             <h3>Paneer Tikka Biryani</h3>
@@ -2008,7 +2722,8 @@
                 </div>
 
                 <div class="menu-card" data-category="chicken" data-name="chicken kolhapuri">
-                    <img src="C:/ZTH_HTML_CSS/First-Website/images/non-veg/chicken-kolhapuri.jpg" alt="Chicken Kolhapuri">
+                    <img src="C:/ZTH_HTML_CSS/First-Website/images/non-veg/chicken-kolhapuri.jpg"
+                        alt="Chicken Kolhapuri">
                     <div class="menu-content">
                         <div class="menu-title">
                             <h3>Chicken Kolhapuri</h3>
@@ -2099,7 +2814,8 @@
                 </div>
 
                 <div class="menu-card" data-category="chicken" data-name="chicken chilly dry">
-                    <img src="C:/ZTH_HTML_CSS/First-Website/images/non-veg/chicken-chilly-dry.jpg" alt="Chicken Chilly Dry">
+                    <img src="C:/ZTH_HTML_CSS/First-Website/images/non-veg/chicken-chilly-dry.jpg"
+                        alt="Chicken Chilly Dry">
                     <div class="menu-content">
                         <div class="menu-title">
                             <h3>Chicken Chilly Dry</h3>
@@ -2667,13 +3383,6 @@
     </section>
 
 
-
-    </div>
-
-
-    </section>
-
-
     <!-- ============================
      CUSTOMER REVIEWS
 ============================= -->
@@ -2812,7 +3521,7 @@
 
                 </div>
 
-                
+
 
                 <div class="review-card">
 
@@ -3203,530 +3912,643 @@
 
     </div>
 
+    <!-- ============================
+     BOOKING MODAL
+============================= -->
 
+    <div class="booking-overlay" id="bookingModal">
+
+        <div class="booking-box">
+
+            <button class="booking-close" type="button" onclick="closeBooking()">
+                &times;
+            </button>
+
+            <div class="booking-header">
+                <i class="fa-solid fa-utensils"></i>
+                <h2>Book Your Order</h2>
+                <p>Shree Sai Krupa Veg • Non-Veg Restaurant</p>
+            </div>
+
+            <form id="bookingForm" onsubmit="submitBooking(event)">
+
+                <div class="form-group">
+                    <label>Customer Name</label>
+                    <input type="text" id="customerName" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" id="customerPhone" placeholder="Enter mobile number" maxlength="10"
+                        pattern="[0-9]{10}" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Food Items</label>
+
+                    <div class="booking-menu-list" id="bookingMenuList">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Order Type</label>
+
+                    <select id="orderType" required>
+                        <option value="">-- Select Order Type --</option>
+                        <option value="Dine-in">Dine-in</option>
+                        <option value="Takeaway">Takeaway</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label>Date</label>
+
+                        <input type="date" id="bookingDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Time</label>
+
+                        <input type="time" id="bookingTime" required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Special Request</label>
+
+                    <textarea id="specialRequest" rows="3" placeholder="Any special request? (Optional)">
+                </textarea>
+                </div>
+
+                <button type="submit" class="confirm-booking-btn">
+
+                    <i class="fa-solid fa-check"></i>
+                    Confirm Booking
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================
+     SUCCESS MODAL
+============================= -->
+
+    <div class="success-overlay" id="successModal">
+
+        <div class="success-box">
+
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <h2>Booking Confirmed!</h2>
+
+            <p>
+                Thank you for booking with
+                <strong>Shree Sai Krupa</strong>.
+            </p>
+
+            <div class="booking-details" id="bookingDetails">
+            </div>
+
+            <button class="success-btn" type="button" onclick="closeSuccess()">
+                Done
+            </button>
+
+        </div>
+
+    </div>
 
     <script>
 
-    /* =========================================================
-       MOBILE NAVIGATION
-    ========================================================= */
+        /* =========================================================
+           MOBILE NAVIGATION
+        ========================================================= */
 
-    function toggleMenu() {
+        function toggleMenu() {
 
-        document
-            .getElementById("nav")
-            .classList.toggle("open");
-
-    }
-
-
-    /* =========================================================
-       MENU SHOW MORE / SHOW LESS
-    ========================================================= */
-
-    const INITIAL_MENU_ITEMS = 6;
-
-    let menuExpanded = false;
-    let activeCategory = "all";
-
-
-    /* =========================================================
-       GET ONLY ACTUAL MENU CARDS
-    ========================================================= */
-
-    function getMenuCards() {
-
-        return Array.from(
-            document.querySelectorAll("#menuGrid > .menu-card")
-        );
-
-    }
-
-
-    /* =========================================================
-       UPDATE MENU
-       Handles:
-       - Show More
-       - Show Less
-       - Category Filter
-       - Search
-    ========================================================= */
-
-    function updateMenu() {
-
-        const cards = getMenuCards();
-
-        const searchInput =
-            document.getElementById("searchInput");
-
-        const query = searchInput
-            ? searchInput.value.toLowerCase().trim()
-            : "";
-
-
-        let matchingCards = [];
-
-
-        /* -----------------------------------------
-           FIND MATCHING CARDS
-        ----------------------------------------- */
-
-        cards.forEach(function (card) {
-
-            const categories =
-                (card.dataset.category || "")
-                    .toLowerCase()
-                    .split(" ");
-
-
-            const name =
-                (card.dataset.name || "")
-                    .toLowerCase();
-
-
-            const categoryMatch =
-                activeCategory === "all" ||
-                categories.includes(activeCategory);
-
-
-            const searchMatch =
-                name.includes(query);
-
-
-            if (categoryMatch && searchMatch) {
-
-                matchingCards.push(card);
-
-            }
-
-
-            /* Hide all cards first */
-
-            card.style.display = "none";
-
-        });
-
-
-        /* -----------------------------------------
-           DISPLAY MATCHING CARDS
-        ----------------------------------------- */
-
-        matchingCards.forEach(function (card, index) {
-
-            if (
-                menuExpanded ||
-                index < INITIAL_MENU_ITEMS
-            ) {
-
-                card.style.display = "flex";
-
-            }
-
-        });
-
-
-        /* Update Show More button */
-
-        updateShowMoreButton(
-            matchingCards.length
-        );
-
-    }
-
-
-    /* =========================================================
-       SHOW MORE / SHOW LESS BUTTON
-    ========================================================= */
-
-    function updateShowMoreButton(totalItems) {
-
-        const button =
-            document.getElementById("showMoreBtn");
-
-
-        if (!button) {
-            return;
-        }
-
-
-        /* If 6 or fewer items, hide button */
-
-        if (totalItems <= INITIAL_MENU_ITEMS) {
-
-            button.style.display = "none";
-
-            return;
+            document
+                .getElementById("nav")
+                .classList.toggle("open");
 
         }
 
 
-        /* Show button */
+        /* =========================================================
+           MENU SHOW MORE / SHOW LESS
+        ========================================================= */
 
-        button.style.display = "inline-flex";
+        const INITIAL_MENU_ITEMS = 6;
+
+        let menuExpanded = false;
+        let activeCategory = "all";
 
 
-        if (menuExpanded) {
+        /* =========================================================
+           GET ONLY ACTUAL MENU CARDS
+        ========================================================= */
 
-            button.innerHTML =
-                'Show Less <span>↑</span>';
+        function getMenuCards() {
 
-            button.setAttribute(
-                "aria-label",
-                "Show less menu items"
-            );
-
-        }
-        else {
-
-            button.innerHTML =
-                'Show More <span>↓</span>';
-
-            button.setAttribute(
-                "aria-label",
-                "Show more menu items"
+            return Array.from(
+                document.querySelectorAll("#menuGrid > .menu-card")
             );
 
         }
 
-    }
+
+        /* =========================================================
+           UPDATE MENU
+           Handles:
+           - Show More
+           - Show Less
+           - Category Filter
+           - Search
+        ========================================================= */
+
+        function updateMenu() {
+
+            const cards = getMenuCards();
+
+            const searchInput =
+                document.getElementById("searchInput");
+
+            const query = searchInput
+                ? searchInput.value.toLowerCase().trim()
+                : "";
 
 
-    /* =========================================================
-       TOGGLE SHOW MORE / SHOW LESS
-    ========================================================= */
-
-    function toggleMenuItems() {
-
-        menuExpanded = !menuExpanded;
-
-        updateMenu();
-
-    }
+            let matchingCards = [];
 
 
-    /* =========================================================
-       FILTER MENU
-    ========================================================= */
+            /* -----------------------------------------
+               FIND MATCHING CARDS
+            ----------------------------------------- */
 
-    function filterFood(category, button) {
+            cards.forEach(function (card) {
 
-        activeCategory = category;
-
-        /* Start collapsed when category changes */
-
-        menuExpanded = false;
-
-
-        /* Remove active class */
-
-        const filters =
-            document.querySelectorAll(".filter");
+                const categories =
+                    (card.dataset.category || "")
+                        .toLowerCase()
+                        .split(" ");
 
 
-        filters.forEach(function (item) {
-
-            item.classList.remove("active");
-
-        });
+                const name =
+                    (card.dataset.name || "")
+                        .toLowerCase();
 
 
-        /* Add active class */
+                const categoryMatch =
+                    activeCategory === "all" ||
+                    categories.includes(activeCategory);
 
-        if (button) {
 
-            button.classList.add("active");
+                const searchMatch =
+                    name.includes(query);
+
+
+                if (categoryMatch && searchMatch) {
+
+                    matchingCards.push(card);
+
+                }
+
+
+                /* Hide all cards first */
+
+                card.style.display = "none";
+
+            });
+
+
+            /* -----------------------------------------
+               DISPLAY MATCHING CARDS
+            ----------------------------------------- */
+
+            matchingCards.forEach(function (card, index) {
+
+                if (
+                    menuExpanded ||
+                    index < INITIAL_MENU_ITEMS
+                ) {
+
+                    card.style.display = "flex";
+
+                }
+
+            });
+
+
+            /* Update Show More button */
+
+            updateShowMoreButton(
+                matchingCards.length
+            );
 
         }
 
 
-        updateMenu();
+        /* =========================================================
+           SHOW MORE / SHOW LESS BUTTON
+        ========================================================= */
 
-    }
+        function updateShowMoreButton(totalItems) {
 
-
-    /* =========================================================
-       SEARCH MENU
-    ========================================================= */
-
-    function searchFood() {
-
-        updateMenu();
-
-    }
+            const button =
+                document.getElementById("showMoreBtn");
 
 
-    /* =========================================================
-       CLOSE MOBILE NAVIGATION
-    ========================================================= */
+            if (!button) {
+                return;
+            }
 
-    function setupMobileNavigation() {
 
-        document
-            .querySelectorAll("nav a")
-            .forEach(function (link) {
+            /* If 6 or fewer items, hide button */
 
-                link.addEventListener(
+            if (totalItems <= INITIAL_MENU_ITEMS) {
+
+                button.style.display = "none";
+
+                return;
+
+            }
+
+
+            /* Show button */
+
+            button.style.display = "inline-flex";
+
+
+            if (menuExpanded) {
+
+                button.innerHTML =
+                    'Show Less <span>↑</span>';
+
+                button.setAttribute(
+                    "aria-label",
+                    "Show less menu items"
+                );
+
+            }
+            else {
+
+                button.innerHTML =
+                    'Show More <span>↓</span>';
+
+                button.setAttribute(
+                    "aria-label",
+                    "Show more menu items"
+                );
+
+            }
+
+        }
+
+
+        /* =========================================================
+           TOGGLE SHOW MORE / SHOW LESS
+        ========================================================= */
+
+        function toggleMenuItems() {
+
+            menuExpanded = !menuExpanded;
+
+            updateMenu();
+
+        }
+
+
+        /* =========================================================
+           FILTER MENU
+        ========================================================= */
+
+        function filterFood(category, button) {
+
+            activeCategory = category;
+
+            /* Start collapsed when category changes */
+
+            menuExpanded = false;
+
+
+            /* Remove active class */
+
+            const filters =
+                document.querySelectorAll(".filter");
+
+
+            filters.forEach(function (item) {
+
+                item.classList.remove("active");
+
+            });
+
+
+            /* Add active class */
+
+            if (button) {
+
+                button.classList.add("active");
+
+            }
+
+
+            updateMenu();
+
+        }
+
+
+        /* =========================================================
+           SEARCH MENU
+        ========================================================= */
+
+        function searchFood() {
+
+            updateMenu();
+
+        }
+
+
+        /* =========================================================
+           CLOSE MOBILE NAVIGATION
+        ========================================================= */
+
+        function setupMobileNavigation() {
+
+            document
+                .querySelectorAll("nav a")
+                .forEach(function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+                            const nav =
+                                document.getElementById("nav");
+
+                            if (nav) {
+
+                                nav.classList.remove("open");
+
+                            }
+
+                        }
+                    );
+
+                });
+
+        }
+
+
+        /* =========================================================
+           CUSTOMER REVIEWS
+        ========================================================= */
+
+        let selectedRating = 5;
+
+
+        /* =========================================================
+           OPEN REVIEW FORM
+        ========================================================= */
+
+        function openReviewForm() {
+
+            const modal =
+                document.getElementById("reviewModal");
+
+            if (modal) {
+
+                modal.classList.add("show");
+
+            }
+
+        }
+
+
+        /* =========================================================
+           CLOSE REVIEW FORM
+        ========================================================= */
+
+        function closeReviewForm() {
+
+            const modal =
+                document.getElementById("reviewModal");
+
+            if (modal) {
+
+                modal.classList.remove("show");
+
+            }
+
+        }
+
+
+        /* =========================================================
+           STAR RATING
+        ========================================================= */
+
+        function setupStarRating() {
+
+            const starButtons =
+                document.querySelectorAll(
+                    ".star-selector button"
+                );
+
+
+            starButtons.forEach(function (button) {
+
+                button.addEventListener(
                     "click",
                     function () {
 
-                        const nav =
-                            document.getElementById("nav");
+                        selectedRating =
+                            Number(
+                                this.dataset.rating
+                            );
 
-                        if (nav) {
 
-                            nav.classList.remove("open");
+                        const ratingInput =
+                            document.getElementById(
+                                "reviewRating"
+                            );
+
+
+                        if (ratingInput) {
+
+                            ratingInput.value =
+                                selectedRating;
 
                         }
+
+
+                        /* Update stars */
+
+                        starButtons.forEach(
+                            function (star) {
+
+                                if (
+                                    Number(
+                                        star.dataset.rating
+                                    ) <= selectedRating
+                                ) {
+
+                                    star.classList.add(
+                                        "selected"
+                                    );
+
+                                }
+                                else {
+
+                                    star.classList.remove(
+                                        "selected"
+                                    );
+
+                                }
+
+                            }
+                        );
 
                     }
                 );
 
             });
 
-    }
 
+            /* Default 5 stars */
 
-    /* =========================================================
-       CUSTOMER REVIEWS
-    ========================================================= */
+            starButtons.forEach(function (star) {
 
-    let selectedRating = 5;
+                star.classList.add("selected");
 
-
-    /* =========================================================
-       OPEN REVIEW FORM
-    ========================================================= */
-
-    function openReviewForm() {
-
-        const modal =
-            document.getElementById("reviewModal");
-
-        if (modal) {
-
-            modal.classList.add("show");
+            });
 
         }
 
-    }
+
+        /* =========================================================
+           SUBMIT CUSTOMER REVIEW
+        ========================================================= */
+
+        function setupReviewForm() {
+
+            const reviewForm =
+                document.getElementById("reviewForm");
 
 
-    /* =========================================================
-       CLOSE REVIEW FORM
-    ========================================================= */
-
-    function closeReviewForm() {
-
-        const modal =
-            document.getElementById("reviewModal");
-
-        if (modal) {
-
-            modal.classList.remove("show");
-
-        }
-
-    }
+            if (!reviewForm) {
+                return;
+            }
 
 
-    /* =========================================================
-       STAR RATING
-    ========================================================= */
+            reviewForm.addEventListener(
+                "submit",
+                function (event) {
 
-    function setupStarRating() {
-
-        const starButtons =
-            document.querySelectorAll(
-                ".star-selector button"
-            );
+                    event.preventDefault();
 
 
-        starButtons.forEach(function (button) {
+                    /* -----------------------------------------
+                       GET CUSTOMER NAME
+                    ----------------------------------------- */
 
-            button.addEventListener(
-                "click",
-                function () {
-
-                    selectedRating =
-                        Number(
-                            this.dataset.rating
-                        );
-
-
-                    const ratingInput =
+                    const nameInput =
                         document.getElementById(
-                            "reviewRating"
+                            "reviewName"
                         );
 
 
-                    if (ratingInput) {
-
-                        ratingInput.value =
-                            selectedRating;
-
-                    }
+                    const reviewInput =
+                        document.getElementById(
+                            "reviewText"
+                        );
 
 
-                    /* Update stars */
+                    const name =
+                        nameInput
+                            ? nameInput.value.trim()
+                            : "";
 
-                    starButtons.forEach(
-                        function (star) {
 
-                            if (
-                                Number(
-                                    star.dataset.rating
-                                ) <= selectedRating
-                            ) {
+                    const review =
+                        reviewInput
+                            ? reviewInput.value.trim()
+                            : "";
 
-                                star.classList.add(
-                                    "selected"
-                                );
 
-                            }
-                            else {
+                    /* -----------------------------------------
+                       VALIDATION
+                    ----------------------------------------- */
 
-                                star.classList.remove(
-                                    "selected"
-                                );
+                    if (!name) {
 
-                            }
+                        alert(
+                            "Please enter your name."
+                        );
 
+                        if (nameInput) {
+                            nameInput.focus();
                         }
-                    );
 
-                }
-            );
+                        return;
 
-        });
-
-
-        /* Default 5 stars */
-
-        starButtons.forEach(function (star) {
-
-            star.classList.add("selected");
-
-        });
-
-    }
-
-
-    /* =========================================================
-       SUBMIT CUSTOMER REVIEW
-    ========================================================= */
-
-    function setupReviewForm() {
-
-        const reviewForm =
-            document.getElementById("reviewForm");
-
-
-        if (!reviewForm) {
-            return;
-        }
-
-
-        reviewForm.addEventListener(
-            "submit",
-            function (event) {
-
-                event.preventDefault();
-
-
-                /* -----------------------------------------
-                   GET CUSTOMER NAME
-                ----------------------------------------- */
-
-                const nameInput =
-                    document.getElementById(
-                        "reviewName"
-                    );
-
-
-                const reviewInput =
-                    document.getElementById(
-                        "reviewText"
-                    );
-
-
-                const name =
-                    nameInput
-                        ? nameInput.value.trim()
-                        : "";
-
-
-                const review =
-                    reviewInput
-                        ? reviewInput.value.trim()
-                        : "";
-
-
-                /* -----------------------------------------
-                   VALIDATION
-                ----------------------------------------- */
-
-                if (!name) {
-
-                    alert(
-                        "Please enter your name."
-                    );
-
-                    if (nameInput) {
-                        nameInput.focus();
                     }
 
-                    return;
 
-                }
+                    if (!review) {
 
+                        alert(
+                            "Please write your review."
+                        );
 
-                if (!review) {
+                        if (reviewInput) {
+                            reviewInput.focus();
+                        }
 
-                    alert(
-                        "Please write your review."
-                    );
+                        return;
 
-                    if (reviewInput) {
-                        reviewInput.focus();
                     }
 
-                    return;
 
-                }
+                    /* -----------------------------------------
+                       CREATE STARS
+                    ----------------------------------------- */
 
-
-                /* -----------------------------------------
-                   CREATE STARS
-                ----------------------------------------- */
-
-                const stars =
-                    "★".repeat(selectedRating) +
-                    "☆".repeat(
-                        5 - selectedRating
-                    );
+                    const stars =
+                        "★".repeat(selectedRating) +
+                        "☆".repeat(
+                            5 - selectedRating
+                        );
 
 
-                /* -----------------------------------------
-                   AVATAR
-                ----------------------------------------- */
+                    /* -----------------------------------------
+                       AVATAR
+                    ----------------------------------------- */
 
-                const avatar =
-                    name.charAt(0).toUpperCase();
-
-
-                /* -----------------------------------------
-                   CREATE REVIEW CARD
-                ----------------------------------------- */
-
-                const reviewCard =
-                    document.createElement("div");
+                    const avatar =
+                        name.charAt(0).toUpperCase();
 
 
-                reviewCard.className =
-                    "review-card";
+                    /* -----------------------------------------
+                       CREATE REVIEW CARD
+                    ----------------------------------------- */
+
+                    const reviewCard =
+                        document.createElement("div");
 
 
-                reviewCard.innerHTML = `
+                    reviewCard.className =
+                        "review-card";
+
+
+                    reviewCard.innerHTML = `
 
                     <div class="review-top">
 
@@ -3769,210 +4591,210 @@
                 `;
 
 
-                /* -----------------------------------------
-                   ADD REVIEW TO PAGE
-                ----------------------------------------- */
+                    /* -----------------------------------------
+                       ADD REVIEW TO PAGE
+                    ----------------------------------------- */
 
-                const reviewsGrid =
-                    document.getElementById(
-                        "reviewsGrid"
-                    );
-
-
-                if (reviewsGrid) {
-
-                    reviewsGrid.prepend(
-                        reviewCard
-                    );
-
-                }
+                    const reviewsGrid =
+                        document.getElementById(
+                            "reviewsGrid"
+                        );
 
 
-                /* -----------------------------------------
-                   SAVE REVIEW
-                ----------------------------------------- */
+                    if (reviewsGrid) {
 
-                saveReview({
-
-                    name: name,
-
-                    review: review,
-
-                    rating: selectedRating
-
-                });
-
-
-                /* -----------------------------------------
-                   RESET FORM
-                ----------------------------------------- */
-
-                reviewForm.reset();
-
-
-                selectedRating = 5;
-
-
-                const starButtons =
-                    document.querySelectorAll(
-                        ".star-selector button"
-                    );
-
-
-                starButtons.forEach(
-                    function (star) {
-
-                        star.classList.add(
-                            "selected"
+                        reviewsGrid.prepend(
+                            reviewCard
                         );
 
                     }
-                );
 
 
-                const ratingInput =
-                    document.getElementById(
-                        "reviewRating"
+                    /* -----------------------------------------
+                       SAVE REVIEW
+                    ----------------------------------------- */
+
+                    saveReview({
+
+                        name: name,
+
+                        review: review,
+
+                        rating: selectedRating
+
+                    });
+
+
+                    /* -----------------------------------------
+                       RESET FORM
+                    ----------------------------------------- */
+
+                    reviewForm.reset();
+
+
+                    selectedRating = 5;
+
+
+                    const starButtons =
+                        document.querySelectorAll(
+                            ".star-selector button"
+                        );
+
+
+                    starButtons.forEach(
+                        function (star) {
+
+                            star.classList.add(
+                                "selected"
+                            );
+
+                        }
                     );
 
 
-                if (ratingInput) {
+                    const ratingInput =
+                        document.getElementById(
+                            "reviewRating"
+                        );
 
-                    ratingInput.value = 5;
+
+                    if (ratingInput) {
+
+                        ratingInput.value = 5;
+
+                    }
+
+
+                    /* Close modal */
+
+                    closeReviewForm();
+
+
+                    /* Confirmation */
+
+                    alert(
+                        "Thank you for your review! ❤️"
+                    );
 
                 }
-
-
-                /* Close modal */
-
-                closeReviewForm();
-
-
-                /* Confirmation */
-
-                alert(
-                    "Thank you for your review! ❤️"
-                );
-
-            }
-        );
-
-    }
-
-
-    /* =========================================================
-       SAVE REVIEW TO LOCAL STORAGE
-    ========================================================= */
-
-    function saveReview(review) {
-
-        let reviews = [];
-
-
-        try {
-
-            reviews =
-                JSON.parse(
-                    localStorage.getItem(
-                        "saikrupaReviews"
-                    )
-                ) || [];
-
-        }
-        catch (error) {
-
-            reviews = [];
-
-        }
-
-
-        reviews.push(review);
-
-
-        localStorage.setItem(
-            "saikrupaReviews",
-            JSON.stringify(reviews)
-        );
-
-    }
-
-
-    /* =========================================================
-       LOAD SAVED REVIEWS
-    ========================================================= */
-
-    function loadReviews() {
-
-        const reviewsGrid =
-            document.getElementById(
-                "reviewsGrid"
             );
 
-
-        if (!reviewsGrid) {
-            return;
         }
 
 
-        let reviews = [];
+        /* =========================================================
+           SAVE REVIEW TO LOCAL STORAGE
+        ========================================================= */
+
+        function saveReview(review) {
+
+            let reviews = [];
 
 
-        try {
+            try {
 
-            reviews =
-                JSON.parse(
-                    localStorage.getItem(
-                        "saikrupaReviews"
-                    )
-                ) || [];
-
-        }
-        catch (error) {
-
-            reviews = [];
-
-        }
-
-
-        /*
-           Display newest reviews first.
-        */
-
-        reviews.reverse().forEach(
-            function (review) {
-
-                const reviewCard =
-                    document.createElement("div");
-
-
-                reviewCard.className =
-                    "review-card";
-
-
-                const rating =
-                    Math.max(
-                        1,
-                        Math.min(
-                            5,
-                            Number(review.rating) || 5
+                reviews =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "saikrupaReviews"
                         )
-                    );
+                    ) || [];
+
+            }
+            catch (error) {
+
+                reviews = [];
+
+            }
 
 
-                const stars =
-                    "★".repeat(rating) +
-                    "☆".repeat(5 - rating);
+            reviews.push(review);
 
 
-                const avatar =
-                    review.name
-                        ? review.name
-                            .charAt(0)
-                            .toUpperCase()
-                        : "C";
+            localStorage.setItem(
+                "saikrupaReviews",
+                JSON.stringify(reviews)
+            );
+
+        }
 
 
-                reviewCard.innerHTML = `
+        /* =========================================================
+           LOAD SAVED REVIEWS
+        ========================================================= */
+
+        function loadReviews() {
+
+            const reviewsGrid =
+                document.getElementById(
+                    "reviewsGrid"
+                );
+
+
+            if (!reviewsGrid) {
+                return;
+            }
+
+
+            let reviews = [];
+
+
+            try {
+
+                reviews =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "saikrupaReviews"
+                        )
+                    ) || [];
+
+            }
+            catch (error) {
+
+                reviews = [];
+
+            }
+
+
+            /*
+               Display newest reviews first.
+            */
+
+            reviews.reverse().forEach(
+                function (review) {
+
+                    const reviewCard =
+                        document.createElement("div");
+
+
+                    reviewCard.className =
+                        "review-card";
+
+
+                    const rating =
+                        Math.max(
+                            1,
+                            Math.min(
+                                5,
+                                Number(review.rating) || 5
+                            )
+                        );
+
+
+                    const stars =
+                        "★".repeat(rating) +
+                        "☆".repeat(5 - rating);
+
+
+                    const avatar =
+                        review.name
+                            ? review.name
+                                .charAt(0)
+                                .toUpperCase()
+                            : "C";
+
+
+                    reviewCard.innerHTML = `
 
                     <div class="review-top">
 
@@ -3986,8 +4808,8 @@
 
                                 <strong>
                                     ${escapeHTML(
-                                        review.name || "Customer"
-                                    )}
+                        review.name || "Customer"
+                    )}
                                 </strong>
 
                                 <span>
@@ -4012,212 +4834,1044 @@
 
                     <p>
                         ${escapeHTML(
-                            review.review || ""
-                        )}
+                        review.review || ""
+                    )}
                     </p>
 
                 `;
 
 
-                reviewsGrid.appendChild(
-                    reviewCard
-                );
+                    reviewsGrid.appendChild(
+                        reviewCard
+                    );
 
-            }
-        );
-
-    }
-
-
-    /* =========================================================
-       PREVENT HTML INJECTION
-    ========================================================= */
-
-    function escapeHTML(text) {
-
-        return String(text)
-
-            .replace(
-                /&/g,
-                "&amp;"
-            )
-
-            .replace(
-                /</g,
-                "&lt;"
-            )
-
-            .replace(
-                />/g,
-                "&gt;"
-            )
-
-            .replace(
-                /"/g,
-                "&quot;"
-            )
-
-            .replace(
-                /'/g,
-                "&#039;"
+                }
             );
 
-    }
-
-
-    /* =========================================================
-       REVIEW MODAL
-       CLOSE WHEN CLICKING OUTSIDE
-    ========================================================= */
-
-    function setupReviewModal() {
-
-        const reviewModal =
-            document.getElementById(
-                "reviewModal"
-            );
-
-
-        if (!reviewModal) {
-            return;
         }
 
 
-        reviewModal.addEventListener(
-            "click",
-            function (event) {
+        /* =========================================================
+           PREVENT HTML INJECTION
+        ========================================================= */
 
-                if (event.target === this) {
+        function escapeHTML(text) {
 
-                    closeReviewForm();
+            return String(text)
+
+                .replace(
+                    /&/g,
+                    "&amp;"
+                )
+
+                .replace(
+                    /</g,
+                    "&lt;"
+                )
+
+                .replace(
+                    />/g,
+                    "&gt;"
+                )
+
+                .replace(
+                    /"/g,
+                    "&quot;"
+                )
+
+                .replace(
+                    /'/g,
+                    "&#039;"
+                );
+
+        }
+
+
+        /* =========================================================
+           REVIEW MODAL
+           CLOSE WHEN CLICKING OUTSIDE
+        ========================================================= */
+
+        function setupReviewModal() {
+
+            const reviewModal =
+                document.getElementById(
+                    "reviewModal"
+                );
+
+
+            if (!reviewModal) {
+                return;
+            }
+
+
+            reviewModal.addEventListener(
+                "click",
+                function (event) {
+
+                    if (event.target === this) {
+
+                        closeReviewForm();
+
+                    }
 
                 }
+            );
 
+        }
+
+
+        /* =========================================================
+   BOOKING SYSTEM
+========================================================= */
+
+
+        /* =========================================================
+           LOAD MENU ITEMS INTO BOOKING
+        ========================================================= */
+
+        function loadBookingMenu() {
+
+            const bookingMenu =
+                document.getElementById("bookingMenuList");
+
+            const menuCards =
+                document.querySelectorAll("#menuGrid > .menu-card");
+
+            if (!bookingMenu) {
+                return;
             }
-        );
 
-    }
+            bookingMenu.innerHTML = "";
 
+            menuCards.forEach(function (card) {
 
-    
+                const nameElement =
+                    card.querySelector("h3");
 
-    /* =========================================================
-       ESC KEY
-       Close Review / Booking / Success Modal
-    ========================================================= */
+                const priceElement =
+                    card.querySelector(".menu-price");
 
-    function setupEscapeKey() {
-
-        document.addEventListener(
-            "keydown",
-            function (event) {
-
-                if (event.key !== "Escape") {
+                if (!nameElement || !priceElement) {
                     return;
                 }
 
+                const foodName =
+                    nameElement.textContent.trim();
 
-                /* Close review */
+                const foodPrice =
+                    priceElement.textContent.trim();
 
-                closeReviewForm();
+
+                const foodItem =
+                    document.createElement("div");
+
+                foodItem.className =
+                    "booking-food-item";
 
 
-                /* Close booking */
+                foodItem.innerHTML = `
 
-                const bookingModal =
-                    document.getElementById(
-                        "bookingModal"
+            <div class="booking-food-left">
+
+                <input
+                    type="checkbox"
+                    name="foodItem"
+                    value="${escapeHTML(foodName)}">
+
+                <span class="booking-food-info">
+
+                    <span class="booking-food-name">
+                        ${escapeHTML(foodName)}
+                    </span>
+
+                    <span class="booking-food-price">
+                        ${escapeHTML(foodPrice)}
+                    </span>
+
+                </span>
+
+            </div>
+
+
+            <div class="food-quantity">
+
+                <button
+                    type="button"
+                    onclick="decreaseQuantity(this)">
+                    −
+                </button>
+
+                <input
+                    type="number"
+                    value="1"
+                    min="1"
+                    max="20"
+                    readonly>
+
+                <button
+                    type="button"
+                    onclick="increaseQuantity(this)">
+                    +
+                </button>
+
+            </div>
+
+        `;
+
+
+                /* Highlight selected item */
+
+                const checkbox =
+                    foodItem.querySelector(
+                        'input[type="checkbox"]'
                     );
 
 
-                if (
-                    bookingModal &&
-                    bookingModal.classList.contains(
-                        "active"
-                    )
-                ) {
+                checkbox.addEventListener(
+                    "change",
+                    function () {
 
-                    closeBooking();
+                        if (this.checked) {
 
-                }
+                            foodItem.classList.add(
+                                "selected"
+                            );
+
+                        }
+                        else {
+
+                            foodItem.classList.remove(
+                                "selected"
+                            );
+
+                        }
+
+                    }
+                );
 
 
-                /* Close success */
+                bookingMenu.appendChild(foodItem);
 
-                const successModal =
-                    document.getElementById(
-                        "successModal"
-                    );
+            });
+
+        }
 
 
-                if (
-                    successModal &&
-                    successModal.classList.contains(
-                        "active"
-                    )
-                ) {
+        /* =========================================================
+           INCREASE FOOD QUANTITY
+        ========================================================= */
 
-                    closeSuccess();
+        function increaseQuantity(button) {
+
+            const quantityInput =
+                button.parentElement.querySelector(
+                    'input[type="number"]'
+                );
+
+            if (!quantityInput) {
+                return;
+            }
+
+            let quantity =
+                Number(quantityInput.value) || 1;
+
+
+            if (quantity < 20) {
+
+                quantity++;
+
+                quantityInput.value =
+                    quantity;
+
+            }
+
+        }
+
+
+        /* =========================================================
+           DECREASE FOOD QUANTITY
+        ========================================================= */
+
+        function decreaseQuantity(button) {
+
+            const quantityInput =
+                button.parentElement.querySelector(
+                    'input[type="number"]'
+                );
+
+            if (!quantityInput) {
+                return;
+            }
+
+            let quantity =
+                Number(quantityInput.value) || 1;
+
+
+            if (quantity > 1) {
+
+                quantity--;
+
+                quantityInput.value =
+                    quantity;
+
+            }
+
+        }
+
+
+        /* =========================================================
+           OPEN BOOKING MODAL
+        ========================================================= */
+
+        function openBooking() {
+
+            const modal =
+                document.getElementById(
+                    "bookingModal"
+                );
+
+            if (!modal) {
+                return;
+            }
+
+
+            /* Load menu items */
+
+            loadBookingMenu();
+
+
+            /* Set today's date as minimum date */
+
+            const dateInput =
+                document.getElementById(
+                    "bookingDate"
+                );
+
+
+            if (dateInput) {
+
+                const today =
+                    new Date();
+
+                const year =
+                    today.getFullYear();
+
+                const month =
+                    String(
+                        today.getMonth() + 1
+                    ).padStart(2, "0");
+
+                const day =
+                    String(
+                        today.getDate()
+                    ).padStart(2, "0");
+
+
+                const todayString =
+                    `${year}-${month}-${day}`;
+
+
+                dateInput.min =
+                    todayString;
+
+
+                if (!dateInput.value) {
+
+                    dateInput.value =
+                        todayString;
 
                 }
 
             }
-        );
-
-    }
 
 
-    /* =========================================================
-       INITIALIZE WEBSITE
-    ========================================================= */
-
-    document.addEventListener(
-        "DOMContentLoaded",
-        function () {
+            modal.classList.add("active");
 
 
-            /* -----------------------------------------
-               MENU
-            ----------------------------------------- */
+            /* Prevent page scrolling */
 
-            menuExpanded = false;
-
-            activeCategory = "all";
-
-            updateMenu();
-
-
-            /* -----------------------------------------
-               REVIEWS
-            ----------------------------------------- */
-
-            setupStarRating();
-
-            setupReviewForm();
-
-            setupReviewModal();
-
-            loadReviews();
-
-
-            /* -----------------------------------------
-               MOBILE NAVIGATION
-            ----------------------------------------- */
-
-            setupMobileNavigation();
-
-
-
-            /* -----------------------------------------
-               ESC KEY
-            ----------------------------------------- */
-
-            setupEscapeKey();
+            document.body.style.overflow =
+                "hidden";
 
         }
-    );
 
-</script>
+
+        /* =========================================================
+           CLOSE BOOKING MODAL
+        ========================================================= */
+
+        function closeBooking() {
+
+            const modal =
+                document.getElementById(
+                    "bookingModal"
+                );
+
+            if (!modal) {
+                return;
+            }
+
+
+            modal.classList.remove("active");
+
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        /* =========================================================
+           SUBMIT BOOKING
+        ========================================================= */
+
+        function submitBooking(event) {
+
+            event.preventDefault();
+
+
+            /* -----------------------------------------
+               GET CUSTOMER DETAILS
+            ----------------------------------------- */
+
+            const nameInput =
+                document.getElementById(
+                    "customerName"
+                );
+
+
+            const phoneInput =
+                document.getElementById(
+                    "customerPhone"
+                );
+
+
+            const orderTypeInput =
+                document.getElementById(
+                    "orderType"
+                );
+
+
+            const dateInput =
+                document.getElementById(
+                    "bookingDate"
+                );
+
+
+            const timeInput =
+                document.getElementById(
+                    "bookingTime"
+                );
+
+
+            const requestInput =
+                document.getElementById(
+                    "specialRequest"
+                );
+
+
+            const name =
+                nameInput
+                    ? nameInput.value.trim()
+                    : "";
+
+
+            const phone =
+                phoneInput
+                    ? phoneInput.value.trim()
+                    : "";
+
+
+            const orderType =
+                orderTypeInput
+                    ? orderTypeInput.value
+                    : "";
+
+
+            const date =
+                dateInput
+                    ? dateInput.value
+                    : "";
+
+
+            const time =
+                timeInput
+                    ? timeInput.value
+                    : "";
+
+
+            const specialRequest =
+                requestInput
+                    ? requestInput.value.trim()
+                    : "";
+
+
+            /* -----------------------------------------
+               VALIDATION
+            ----------------------------------------- */
+
+            if (!name) {
+
+                alert(
+                    "Please enter your name."
+                );
+
+                if (nameInput) {
+                    nameInput.focus();
+                }
+
+                return;
+
+            }
+
+
+            if (!/^[0-9]{10}$/.test(phone)) {
+
+                alert(
+                    "Please enter a valid 10-digit mobile number."
+                );
+
+                if (phoneInput) {
+                    phoneInput.focus();
+                }
+
+                return;
+
+            }
+
+
+            if (!orderType) {
+
+                alert(
+                    "Please select order type."
+                );
+
+                return;
+
+            }
+
+
+            if (!date) {
+
+                alert(
+                    "Please select booking date."
+                );
+
+                return;
+
+            }
+
+
+            if (!time) {
+
+                alert(
+                    "Please select booking time."
+                );
+
+                return;
+
+            }
+
+
+            /* -----------------------------------------
+               GET SELECTED FOOD ITEMS
+            ----------------------------------------- */
+
+            const selectedFoods =
+                document.querySelectorAll(
+                    'input[name="foodItem"]:checked'
+                );
+
+
+            if (selectedFoods.length === 0) {
+
+                alert(
+                    "Please select at least one food item."
+                );
+
+                return;
+
+            }
+
+
+            /* -----------------------------------------
+               CREATE SELECTED FOOD LIST
+            ----------------------------------------- */
+
+            let foodHTML = "";
+
+
+            selectedFoods.forEach(
+                function (checkbox) {
+
+                    const foodItem =
+                        checkbox.closest(
+                            ".booking-food-item"
+                        );
+
+
+                    const quantityInput =
+                        foodItem.querySelector(
+                            'input[type="number"]'
+                        );
+
+
+                    const quantity =
+                        quantityInput
+                            ? Number(
+                                quantityInput.value
+                            ) || 1
+                            : 1;
+
+
+                    const foodName =
+                        checkbox.value;
+
+
+                    const priceElement =
+                        foodItem.querySelector(
+                            ".booking-food-price"
+                        );
+
+
+                    const price =
+                        priceElement
+                            ? priceElement.textContent.trim()
+                            : "";
+
+
+                    foodHTML += `
+
+                <div class="selected-food">
+
+                    <span>
+                        ${escapeHTML(foodName)}
+                    </span>
+
+                    <span>
+                        × ${quantity}
+                    </span>
+
+                    <strong>
+                        ${escapeHTML(price)}
+                    </strong>
+
+                </div>
+
+            `;
+
+                }
+            );
+
+
+            /* -----------------------------------------
+               CREATE BOOKING ID
+            ----------------------------------------- */
+
+            const bookingId =
+                "SK" +
+                Math.floor(
+                    1000 +
+                    Math.random() * 9000
+                );
+
+
+            /* -----------------------------------------
+               FORMAT DATE
+            ----------------------------------------- */
+
+            let formattedDate =
+                date;
+
+
+            if (date) {
+
+                const dateObject =
+                    new Date(
+                        date + "T00:00:00"
+                    );
+
+
+                formattedDate =
+                    dateObject.toLocaleDateString(
+                        "en-IN",
+                        {
+                            day: "2-digit",
+                            month: "short",
+                            year: "numeric"
+                        }
+                    );
+
+            }
+
+
+            /* -----------------------------------------
+               CREATE BOOKING DETAILS
+            ----------------------------------------- */
+
+            const details =
+                document.getElementById(
+                    "bookingDetails"
+                );
+
+
+            if (details) {
+
+                details.innerHTML = `
+
+            <div class="detail-row">
+
+                <span>Booking ID</span>
+
+                <strong>
+                    ${bookingId}
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>Customer</span>
+
+                <strong>
+                    ${escapeHTML(name)}
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>Mobile</span>
+
+                <strong>
+                    ${escapeHTML(phone)}
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>Order Type</span>
+
+                <strong>
+                    ${escapeHTML(orderType)}
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>Date</span>
+
+                <strong>
+                    ${escapeHTML(formattedDate)}
+                </strong>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span>Time</span>
+
+                <strong>
+                    ${escapeHTML(time)}
+                </strong>
+
+            </div>
+
+
+            <div class="detail-title">
+                Selected Food
+            </div>
+
+
+            <div class="food-list">
+
+                ${foodHTML}
+
+            </div>
+
+
+            ${specialRequest
+                        ? `
+                    <div class="special-request">
+
+                        <strong>
+                            Special Request
+                        </strong>
+
+                        <p>
+                            ${escapeHTML(
+                            specialRequest
+                        )}
+                        </p>
+
+                    </div>
+                    `
+                        : ""
+                    }
+
+        `;
+
+            }
+
+
+            /* -----------------------------------------
+               CLOSE BOOKING MODAL
+            ----------------------------------------- */
+
+            closeBooking();
+
+
+            /* -----------------------------------------
+               OPEN SUCCESS MODAL
+            ----------------------------------------- */
+
+            const successModal =
+                document.getElementById(
+                    "successModal"
+                );
+
+
+            if (successModal) {
+
+                successModal.classList.add(
+                    "active"
+                );
+
+
+                document.body.style.overflow =
+                    "hidden";
+
+            }
+
+
+        }
+
+
+        /* =========================================================
+           CLOSE SUCCESS MODAL
+        ========================================================= */
+
+        function closeSuccess() {
+
+            const successModal =
+                document.getElementById(
+                    "successModal"
+                );
+
+
+            if (successModal) {
+
+                successModal.classList.remove(
+                    "active"
+                );
+
+            }
+
+
+            document.body.style.overflow =
+                "";
+
+
+            /* Reset booking form */
+
+            const bookingForm =
+                document.getElementById(
+                    "bookingForm"
+                );
+
+
+            if (bookingForm) {
+
+                bookingForm.reset();
+
+            }
+
+
+            /* Reset selected food items */
+
+            document
+                .querySelectorAll(
+                    ".booking-food-item"
+                )
+                .forEach(
+                    function (item) {
+
+                        item.classList.remove(
+                            "selected"
+                        );
+
+
+                        const quantity =
+                            item.querySelector(
+                                'input[type="number"]'
+                            );
+
+
+                        if (quantity) {
+
+                            quantity.value = 1;
+
+                        }
+
+                    }
+                );
+
+        }
+
+
+        /* =========================================================
+   BOOKING MODAL
+   CLOSE WHEN CLICKING OUTSIDE
+========================================================= */
+
+        function setupBookingModal() {
+
+            const bookingModal =
+                document.getElementById("bookingModal");
+
+            if (bookingModal) {
+
+                bookingModal.addEventListener(
+                    "click",
+                    function (event) {
+
+                        if (event.target === this) {
+                            closeBooking();
+                        }
+
+                    }
+                );
+
+            }
+
+            const successModal =
+                document.getElementById("successModal");
+
+            if (successModal) {
+
+                successModal.addEventListener(
+                    "click",
+                    function (event) {
+
+                        if (event.target === this) {
+                            closeSuccess();
+                        }
+
+                    }
+                );
+
+            }
+
+        }
+
+
+
+        /* =========================================================
+           ESC KEY
+           Close Review / Booking / Success Modal
+        ========================================================= */
+
+        function setupEscapeKey() {
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (event.key !== "Escape") {
+                        return;
+                    }
+
+
+                    /* Close review */
+
+                    closeReviewForm();
+
+
+                    /* Close booking */
+
+                    const bookingModal =
+                        document.getElementById(
+                            "bookingModal"
+                        );
+
+
+                    if (
+                        bookingModal &&
+                        bookingModal.classList.contains(
+                            "active"
+                        )
+                    ) {
+
+                        closeBooking();
+
+                    }
+
+
+                    /* Close success */
+
+                    const successModal =
+                        document.getElementById(
+                            "successModal"
+                        );
+
+
+                    if (
+                        successModal &&
+                        successModal.classList.contains(
+                            "active"
+                        )
+                    ) {
+
+                        closeSuccess();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /* =========================================================
+           INITIALIZE WEBSITE
+        ========================================================= */
+
+
+        document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        menuExpanded = false;
+        activeCategory = "all";
+
+        updateMenu();
+
+        setupStarRating();
+        setupReviewForm();
+        setupReviewModal();
+        loadReviews();
+
+        setupMobileNavigation();
+
+        /* BOOKING */
+        setupBookingModal();
+
+        /* ESC KEY */
+        setupEscapeKey();
+
+    }
+);
+
+
+    </script>
 
 
 </body>
